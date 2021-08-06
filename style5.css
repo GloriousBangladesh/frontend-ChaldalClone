@@ -475,4 +475,22 @@ form.example input[type=text] {
     #location-button {
         display:none;
     }
+
+    /* #header-buttons {
+        display: none;
+    } */
+
+    #three-dot-button {
+        display: block;
+    }
+
+    #header-logo {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    #three-dot-button {
+        display: none;
+    }
 }

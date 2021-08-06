@@ -7,16 +7,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Collapsible sidebar using Bootstrap 4</title>
+
+  <!-- For phone number input -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js"></script>
+
+  <link rel="stylesheet" href="css/twemoji-awesome.css">
+
+
   <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
   <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="style5.css">
+  <!-- <link rel="stylesheet" href="style5.css"> -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Font Awesome JS -->
@@ -40,87 +46,61 @@
 
 <body>
   <div class="wrapper">
+
     <!-- Sidebar Holder -->
     <nav id="sidebar">
-      <div class="sidebar-header"> </div>
+      <div class="sidebar-header"></div>
       <ul class="list-unstyled components">
+        <p>Category List</p>
         <li class="active">
-          <a href="#"><img class="img_set"
-              src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1"
-              alt=""> Popular</a>
-          <a href="#"><img class="img_set"
-              src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1"
-              alt=""> Hygiene</a>
-          <a href="#babycareSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img
-              class="img_set"
-              src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1"
-              alt=""> Baby Care</a>
-          <ul class="collapse list-unstyled" id="babycareSubmenu">
-            <li>
-              <a href="">Newborn Essentials</a>
-            <li>
-
-              <a href="#diepersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                Diepers</a>
-              <ul class="collapse list-unstyled" id="diepersSubmenu">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" aria-controls="homeSubmenu" class="dropdown-toggle">Home</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu" aria-controls="homeSubmenu">
                 <li>
-                  <a href="#">Wipes</a>
+                    <a href="#">Home 1</a>
                 </li>
                 <li>
-                  <a href="#">Diepers</a>
+                    <a href="#">Home 2</a>
                 </li>
-            </li>
-
-          </ul>
-
-        <li>
-          <a href="">Feeders</a>
-        <li>
-        <li>
-          <a href="#foodingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Fooding</a>
-          <ul class="collapse list-unstyled" id="foodingSubmenu">
-            <li><a href="#">Formula</a></li>
-            <li><a href="#">Baby & Toddler Food</a></li>
-            <li><a href="#">Milk,juice&Drinks</a></li>
-            <li>
-            </li>
-          </ul>
-        <li>
-          <a href="">Bath & skincare</a>
+                <li>
+                    <a href="#">Home 3</a>
+                </li>
+            </ul>
         </li>
         <li>
-          <a href="">Baby accessories</a>
-        </li>
-
-        <li>
-          <a href="">Babycare</a>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-          <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li>
-              <a href="#">Page 1</a>
-            </li>
-            <li>
-              <a href="#">Page 2</a>
-            </li>
-            <li>
-              <a href="#">Page 3</a>
-            </li>
-          </ul>
+            <a href="#">About</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href="#">Page 1</a>
+                </li>
+                <li>
+                    <a href="#">Page 2</a>
+                </li>
+                <li class="active">
+                  <a href="#page3Submenu" data-toggle="collapse" aria-expanded="false" aria-controls="page3Submenu" class="dropdown-toggle">Page 3</a>
+                  <ul class="collapse list-unstyled" id="page3Submenu" aria-controls="page3Submenu">
+                      <li>
+                          <a href="#">Home 1</a>
+                      </li>
+                      <li>
+                          <a href="#">Home 2</a>
+                      </li>
+                      <li>
+                          <a href="#">Home 3</a>
+                      </li>
+                  </ul>
+              </li>
+            </ul>
         </li>
-      </ul>
-      </ul>
-
-      <ul class="list-unstyled CTAs">
         <li>
-          <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+            <a href="#">Portfolio</a>
         </li>
         <li>
-          <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+            <a href="#">Contact</a>
         </li>
-      </ul>
+      </ul> 
     </nav>
 
     <!-- Page Content Holder -->
@@ -135,9 +115,9 @@
                 <span></span>
                 <span></span>
               </button>
-              <img class="egg_set img-fluid"
+              <img id="header-logo" class="egg_set img-fluid"
               style="width: 70%;"
-              src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/header/Header/images/logo-small.png?q=high"
+              src="img/chaldal-logo-small.png"
               alt="">
             </a>
           </div>
@@ -159,8 +139,8 @@
               </div>
             </div>
           </div>
-          
-          <div style="height: 100%;" class="col-5 justify-content-center my-auto">
+          <div id="header-buttons" style="height: 100%;" class="col-5 justify-content-center justify-content-sm-end my-auto">
+            <i id="three-dot-button" class="fa fa-ellipsis-v" aria-hidden="true"></i>
             <div style="height: 100%;" class="row justify-content-around">
               <div id="location-button" style="padding: 10px 0; height: 100%" class="col-md-3 text-center header-button border-left border-right">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>  Dhaka <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -199,50 +179,124 @@
         <div class="container category-cell-container">
           <div class="row justify-content-center">
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Fruits & Vegetables</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-mango"></i>
+                </div>
+              </div>
             </div>
 
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Meat & Fish</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-fish"></i>
+                </div>
+              </div>
             </div>
 
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Cooking</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-mango"></i>
+                </div>
+              </div>
             </div>
 
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Beverages</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-beverage-box"></i>
+                </div>
+              </div>
             </div>
 
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Home & Cleaning</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-broom"></i>
+                </div>
+              </div>
             </div>
 
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Pest Control</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-bug"></i>
+                </div>
+              </div>
             </div>
 
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Office Products</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-paperclip"></i>
+                </div>
+              </div>
             </div>
 
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Beauty Products</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-lipstick"></i>
+                </div>
+              </div>
             </div>
 
             <div class="category-cell border text-center rounded col-md-3 m-1">
-              <span class="align-middle category-name">Column</span>
-              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Health Products</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-pill"></i>
+                </div>
+              </div>
             </div>
-          </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Pet Care</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-cat"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Home Appliances</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-chair"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <div class="row justify-content-around">
+                <div class="align-middle category-name col-md-9">Baby Care</div>
+                <!-- <img class="category-icon img-fluid float-right" src="img/sample.png" alt=""> -->
+                <div class="col-md-2">
+                  <i class="twa twa-lg twa-baby-bottle"></i>
+                </div>
+              </div>
+            </div>
       </section>
 
       <!-- How to Order -->
@@ -611,17 +665,17 @@
   </div>
 
   <!-- jQuery CDN - Slim version (=without AJAX) -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <!-- Popper.JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
     integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
     integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 
   <script type="text/javascript">
     $(document).ready(function () {
