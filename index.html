@@ -2,529 +2,635 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js"></script>
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style5.css">
-    <link rel="stylesheet" href="style.css">
+  <title>Collapsible sidebar using Bootstrap 4</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js"></script>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="style5.css">
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
 
-    <!-- Bootstrap CDNs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap CDNs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-    <div class="wrapper">
-        <!-- Sidebar Holder -->
-        <nav id="sidebar">
-            <div class="sidebar-header">  </div>
-                <ul class="list-unstyled components">
-                    <li class="active">
-                        <a href="#"><img  class="img_set"src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1" alt=""> Popular</a>
-                        <a href="#"><img  class="img_set"src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1" alt=""> Hygiene</a>
-                        <a href="#babycareSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img  class="img_set"src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1" alt=""> Baby Care</a>
-                        <ul class="collapse list-unstyled" id="babycareSubmenu">
-                            <li>
-                                <a href="" >Newborn Essentials</a>
-                            <li>
-                        
-                            <a href="#diepersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Diepers</a>
-                        <ul class="collapse list-unstyled" id="diepersSubmenu">
-                            <li>
-                                <a href="#">Wipes</a>
-                            </li>
-                            <li>
-                                <a href="#">Diepers</a>
-                            </li>
-                            </li>
-                                
-                        </ul>
-                  
-                            <li>
-                                <a href="" >Feeders</a>
-                            <li>
-                            <li>
-                                <a href="#foodingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >Fooding</a>
-                        <ul class="collapse list-unstyled" id="foodingSubmenu">
-                            <li><a href="#">Formula</a></li>
-                            <li><a href="#">Baby & Toddler Food</a></li>
-                            <li><a href="#">Milk,juice&Drinks</a></li>
-                            <li>
-                            </li>
-                        </ul>
-                            <li>
-                                <a href="" >Bath & skincare</a>
-                            </li>
-                            <li>
-                                <a href="" >Baby accessories</a>
-                            </li>
-                            
-                            <li>
-                                <a href="" >Babycare</a>
-                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                             <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a href="#">Page 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Page 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Page 3</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-                </ul>  
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header"> </div>
+      <ul class="list-unstyled components">
+        <li class="active">
+          <a href="#"><img class="img_set"
+              src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1"
+              alt=""> Popular</a>
+          <a href="#"><img class="img_set"
+              src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1"
+              alt=""> Hygiene</a>
+          <a href="#babycareSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img
+              class="img_set"
+              src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&amp;q=low&amp;v=1&amp;m=40&amp;webp=1&amp;alpha=1"
+              alt=""> Baby Care</a>
+          <ul class="collapse list-unstyled" id="babycareSubmenu">
+            <li>
+              <a href="">Newborn Essentials</a>
+            <li>
 
-            <ul class="list-unstyled CTAs">
+              <a href="#diepersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                Diepers</a>
+              <ul class="collapse list-unstyled" id="diepersSubmenu">
                 <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                  <a href="#">Wipes</a>
                 </li>
                 <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                  <a href="#">Diepers</a>
                 </li>
-            </ul>
-        </nav>
+            </li>
 
-        <!-- Page Content Holder -->
-        <div id="content">
+          </ul>
 
-            <nav class="navbar navbar-expand-lg  navbar-light bg-light d-flex">
-                <div class="container-fluid navItems">
+        <li>
+          <a href="">Feeders</a>
+        <li>
+        <li>
+          <a href="#foodingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Fooding</a>
+          <ul class="collapse list-unstyled" id="foodingSubmenu">
+            <li><a href="#">Formula</a></li>
+            <li><a href="#">Baby & Toddler Food</a></li>
+            <li><a href="#">Milk,juice&Drinks</a></li>
+            <li>
+            </li>
+          </ul>
+        <li>
+          <a href="">Bath & skincare</a>
+        </li>
+        <li>
+          <a href="">Baby accessories</a>
+        </li>
 
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    
-                    <div class="">
-                        <img class="egg_set brandImage"src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/header/Header/images/logo-small.png?q=high" alt="">
+        <li>
+          <a href="">Babycare</a>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="#">Page 1</a>
+            </li>
+            <li>
+              <a href="#">Page 2</a>
+            </li>
+            <li>
+              <a href="#">Page 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      </ul>
 
-                    </div>
-                    <div class="searchField">
-                        <form  class="example" action="/action_page.php ">
-                            <input type="text" placeholder="Search.." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-                   
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Location</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Help & Care</a>
-                               
-                               
-                            <!-- </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+      <ul class="list-unstyled CTAs">
+        <li>
+          <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+        </li>
+        <li>
+          <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+        </li>
+      </ul>
+    </nav>
 
-            
-            <!-- Product Categories -->
-            <section class="product-categories">
-                <h2 class="title text-center font-weight-bold">Our Product Categories</h2>
-                <div class="container category-cell-container">
-                <div class="row justify-content-center">
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>
+    <!-- Page Content Holder -->
+    <div id="content">
+      <!-- navbar navbar-expand-lg  navbar-light bg-light  -->
+      <nav style="margin: -20px; padding: 0;background-color: #fdd670;" class="d-flex">
+        <div style="width: 100%;margin-left: 10px;" class="row justify-content-around my-auto">
+          <div class="col-2">
+            <a class="navbar-brand" href="#">
+              <button type="button" id="sidebarCollapse" class="navbar-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <img class="egg_set img-fluid"
+              style="width: 70%;"
+              src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/header/Header/images/logo-small.png?q=high"
+              alt="">
+            </a>
+          </div>
 
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>
+          <div class="col-5 justify-content-center my-auto">
+            <!-- <form id="navbarNav" class="form-inline">
+              <input style="width: 60%;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button style="width: 15%;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+            <!-- <div class="form-group has-search">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" class="form-control" placeholder="Search">
+            </div> -->
 
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>
-                
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>
-
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>
-
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>   
-
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>
-
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>
-
-                <div class="category-cell border text-center rounded col-md-3 m-1">
-                    <span class="align-middle category-name">Column</span>
-                    <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
-                </div>   
-                </div>
-            </section>
-
-            <!-- How to Order -->
-            <section class="mt-5 pb-5">
-                <h2 class="title text-center font-weight-bold">How to order from Chaldal ?</h2>
-                <div class="mt-4 row justify-content-center">
-                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="black-icon carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="img/tutorial-1.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/tutorial-2.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/tutorial-3.jpg" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="black-icon  carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="black-icon  carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-            </section>
-
-            
-            <!-- Why People Love Chaldal -->
-            <section class="mt-5 pb-5">
-                <h2 class="title text-center font-weight-bold">Why People 
-                <svg 
-                  width="50px" height="50px" style="fill:#ff0000;stroke:#ff0000;display:inline-block;vertical-align:middle;" version="1.1" viewBox="0 0 100 100"><path d="m83.332 27.082c-2.293-4.168-16.668-18.125-33.332 2.082-17.5-20.207-31.043-6.25-33.332-2.082-4.168 7.707-1.668 19.375 4.168 25l29.168 29.168 29.168-29.168c5.8281-5.625 8.3281-17.289 4.1602-25z"></path>
-                </svg> 
-                  Chaldal</h1>
+            <div class="input-group mb-3 my-auto">
+              <input type="text" class="form-control border-right-0" placeholder="Search for products (e.g. eggs, milk, potato)" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text border-left-0" style="background-color: white;" id="basic-addon2"><span class="fa fa-search form-control-feedback"></span></span>
+              </div>
+            </div>
+          </div>
           
-                <div class="mt-4 row justify-content-center">
-                  <div style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;" class="tile border text-center rounded col-md-4">
-                    <img style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;" class="img-fluid" src="img/service.jpg" alt="">
-                    <div style="border-width:3px !important" class="centered pt-4 border-bottom border-warning">
-                      <div class="tile-text-title">
-                        Convenient & Quick
-                      </div>
-                      <div class="m-2 tile-inner-title">
-                        No waiting in traffic, no haggling, no worries carrying groceries, they're delivered right at your door.
-                      </div>
-                    </div>
-                  </div>
-                  <div style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;" class="tile border text-center rounded col-md-4">
-                    <img style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;" class="img-fluid" src="img/service.jpg" alt="">
-                    <div style="border-width:3px !important" class="centered pt-4 border-bottom border-success">
-                      <div class="tile-text-title">
-                        Freshly Picked
-                      </div>
-                      <div class="m-2 tile-inner-title">
-                        Our fresh produce is sourced every morning, you get the best from us.
-                      </div>
-                    </div>
-                  </div>
-                  <div style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;" class="tile border text-center rounded col-md-4">
-                    <img style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;" class="img-fluid" src="img/service.jpg" alt="">
-                    <div style="border-width:3px !important" class="centered pt-4 border-bottom border-danger">
-                      <div class="tile-text-title">
-                        A wide range of Products
-                      </div>
-                      <div class="m-2 tile-inner-title">
-                        With 4000+ Products to choose from, forget scouring those aisles for hours.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </section>
-
-            <!-- Client Reaction -->
-            <section class="mt-5 pb-5">
-                <h2 class="title text-center font-weight-bold">What our clients are saying</h2>
-                
-                  <div class='container justify-content-center'>
-                    <div id="quote-carousel" class="carousel slide" data-ride="carousel">
-                      <!-- Bottom Carousel Indicators -->
-                      <ol class="black-icon carousel-indicators">
-                        <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#quote-carousel" data-slide-to="1"></li>
-                        <li data-target="#quote-carousel" data-slide-to="2"></li>
-                      </ol>
-                      
-                      <!-- Carousel Slides / Quotes -->
-                      <div class="carousel-inner">
-                      
-                        <!-- Quote 1 -->
-                        <div class="carousel-item active">
-                          
-                            <div class="row">
-                              <div class="col-md-3 text-center">
-                                <img class="rounded-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">
-                                <!--<img class="rounded-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
-                              </div>
-                              <div class="col">
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                              </div>
-                            </div>
-                          
-                        </div>
-                        <!-- Quote 2 -->
-                        <div class="carousel-item">
-                            <div class="row">
-                              <div class="col-md-3 text-center">
-                                <img class="rounded-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">
-                              </div>
-                              <div class="col">
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                              </div>
-                            </div>
-                          
-                        </div>
-                        <!-- Quote 3 -->
-                        <div class="carousel-item">
-                            <div class="row">
-                              <div class="col-md-3 text-center">
-                                <img class="rounded-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;">
-                              </div>
-                              <div class="col">
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                              </div>
-                            </div>
+          <div style="height: 100%;" class="col-5 justify-content-center my-auto">
+            <div style="height: 100%;" class="row justify-content-around">
+              <div id="location-button" style="padding: 10px 0; height: 100%" class="col-md-3 text-center header-button border-left border-right">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>  Dhaka <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </div>
+              <div id="help-button" style="padding: 10px 0; height: 100%" class="col-md-4 text-center header-button border-right">
+                <i class="fa fa-question-circle" aria-hidden="true"></i> Help & More
+              </div>
+              <div id="language-button" style="padding: 10px 0; height: 100%" class="col-md-2 text-center header-button border-right">
+                <span style="color: red;">EN</span> | বাং
+              </div>
+              <div id="signin-button" style="background-color: #ff686e;color:white;font-weight: bold;" class="col-md-3 text-center header-button border-right">
+                Sign in
+              </div>
+            </div>
+          </div>
           
-                        </div>
-                      </div>
-                      
-                      <!-- Carousel Buttons Next/Prev -->
-                      <a class="black-icon carousel-control-prev" href="#quote-carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="black-icon carousel-control-next" href="#quote-carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>          </div>                          
-                  </div>
-                
-            </section>
-
-            <!-- Corporate -->
-            <section class="mt-5 mb-5" id="corporate">
-                <div class="mainContainer">
-                  <div class="corporate-content">
-                    <div class="initialLabel">
-                      <img src="img/brifcase.svg" alt="">
-                        <h2>Do you own a business?</h2>
-                        <h3>Become a Corporate Customer</h3>
-                    </div>
-                    <ul class="corporate-benefits">
-                      <li class="corporate-benefits-item">
-                        <i class="white-icon rounded fa fa-check fa-2x" aria-hidden="true"></i>
-                        <img src="img/money.svg" alt="">
-                        <h4>Special Corporate Prices</h4></li>
-                        <li class="corporate-benefits-item">
-                          <i class="white-icon rounded  fa fa-check fa-2x" aria-hidden="true"></i>
-                          <img src="img/support.svg" alt="">
-                          <h4>24 Hour Support</h4></li>
-                          <li class="corporate-benefits-item"><i class="white-icon rounded  fa fa-check fa-2x" aria-hidden="true"></i>
-                            <img src="img/delivery.svg" alt="">
-                        <h4>Flexible Free Delivery</h4>
-                      </li>
-                    </ul>
-                    <a href="/corporate">find out more</a>
-                  </div>
-                </div>
-            </section>
-
-            <!-- Get App -->
-            <section class="mt-5">
-                <div class="header">
-                    <div class="justify-content-center">
-                    </div>
-                    <div class="row">
-                        <div class="pb-0 category-cell text-center rounded col-md-8">
-                            <h2 class="title h4 text-center font-weight-bold">Be a part of our family</h2>
-                            <div class="container mt-5">
-                                <div id="phone-number-form" class="input-group justify-content-center">
-                                    <input id="phone-number" type="tel" class="form-control">
-                                    <div class="input-group-append">
-                                        <span style="color: white;" class="input-group-text bg-danger" id="basic-addon2">Get App</span>
-                                      </div>
-                                  </div>
-                                <div class="alert alert-info" style="display: none;"></div>
-                            </div>
-                            <script>
-                                $("#phone-number").intlTelInput({
-                                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
-                                });
-                            </script>
-                            <div class="row justify-content-center mt-4">
-                                    <img class="col-md-4 img-fluid" src="img/google-play.png" alt="Download chaldal Android app">
-                                    <img class="col-md-4 img-fluid" src="img/app-store.png" alt="Download chaldal iOS app">
-                            </div>
-                        </div>
-    
-                        <div class="pb-0 mb-0 category-cell text-center rounded col">
-                            <img class="img-fluid float-right" src="img/app-preview.png">
-                        </div>
-                    </div>
-            </section>
-
-             <!-- MAP -->
-            <section class="row bg-dark">
-                <div class=" col-md-7 container mapImage">
-                    <img src="img/map.png" alt="">
-                </div>
-                <div class="companyLog col-md-5 text-center">
-                    <h1 class="font-weight-bold text-warning">Dhaka</h1>
-                    <h1>Total Order Placed</h1>
-                    <h1 class="font-weight-bold text-warning">75213696</h1>
-                    <h1>Total Saving</h1>
-                    <h1 class="font-weight-bold text-warning">৳218,744,100</h1>
-                    <h1>Time Saved</h1>
-                    <h1 class="font-weight-bold text-warning">744,100 hrs</h1>
-                </div>
-            </section>
-            <section>
-                <div class="row bg-light-grey">
-                    <div class="col-md-3">
-                        <div class="d-flex deliverySystem mx-2 justify-content-center">
-                            <img src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/stores/chaldal/components/page/BrandComponent/images/1-hour.png?q=low&amp;webp=1&amp;alpha=1">
-                            <p style="font-size:smaller; color: #272626" class="mx-3">1 hour delivery</p>
-                        </div>
-                    </div>
-                     <div class="col-md-3">
-                        <div class="d-flex deliverySystem mx-2 justify-content-center">
-                            <img src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/stores/chaldal/components/page/BrandComponent/images/cash-on-delivery.png?q=low&amp;webp=1&amp;alpha=1">
-                            <p style="font-size:smaller; color: #272626">Cash on delivery</p>
-                        </div>
-                     </div>
-                    
-                    <div class="col paysystem d-flex justify-content-center justify-content-md-end">
-                        <p style="font-size:smaller; color: #272626">Pay With</p>
-                        <img src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/Amex.png?q=low&amp;webp=1&amp;alpha=1">
-                        <img  src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/components/shared/NewFooter/images/bkash.png?v=1&amp;q=low&amp;webp=1&amp;alpha=1">
-                        <img  src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/components/shared/NewFooter/images/mastercard.png?q=low&amp;webp=1&amp;alpha=1">
-                        <img src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/components/shared/NewFooter/images/VIsa.png?q=low&amp;webp=1&amp;alpha=1">
-                    </div>
-                </div>
-            </section>
-
-             <!-- Footer -->
-            <section>
-                <div class="row">
-                    <div class="col-md-9 servicefooter">
-                        <div class="mx-2">
-                            <img class="egg_set" src="img/chaldal-logo-small.png" alt="">
-                            <p style="font-size: small; color: #615e58;">Chaldal.com is an online shop available in Dhaka, Narayanganj, Chattogram and Jashore. We believe time is valuable to our fellow residents, and that they should not have to waste hours in traffic, brave bad weather and wait in line just to buy basic necessities like eggs! This is why Chaldal delivers everything you need right at your door-step and at no additional cost.</p>
-                        </div>
-                        <div style="color: #615e58" class="row mx-2 my-5 justify-content-around">
-                            <div class="col-md-3 col-sm-8 text-md-left text-center">
-                                <h5>Customer Service</h5>
-                                <hr class="m-0">
-                                <a href=""><p class="m-0">Contact Us</p></a>
-                                <a href=""><p class="m-0">FAQ</p></a>
-                            </div>
-                            <div class="col-md-3 col-sm-8 text-md-left text-center">
-                                <h5>Customer Service</h5>
-                                <hr class="m-0">
-                                <a href=""><p class="m-0">Contact Us</p></a>
-                                <a href=""><p class="m-0">FAQ</p></a>
-                            </div>
-                            <div class="col-md-3 col-sm-8 text-md-left text-center">
-                                <h5>Customer Service</h5>
-                                <hr class="m-0">
-                                <a href=""><p class="m-0">Contact Us</p></a>
-                                <a href=""><p class="m-0">FAQ</p></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mx-0">
-                        <div class="row">
-                            <div class="col-sm-12 d-flex mb-5 mt-4">
-                                <img class="mr-2" width="50%" src=" https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/google_play_store.png?q=low&webp=1&alpha=1" alt="">
-                                <img  width="50%" src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/app_store.png?q=low&amp;webp=1&amp;alpha=1">
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <img class="" src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/phone_icon.png?q=low&amp;webp=1&amp;alpha=1">
-                            <span class="ml-2 font-weight-bold" style="font-size:x-large; font-weight: 700;">01889966334</span>
-                            <p class="emailSupport"><span>or email</span> <strong style="font-weight: 700;">support@amjam.com</strong> </p>
-                        </div>
-                        <div class="col-sm-12 social d-flex mr-0 pr-0 justify-content-end mb-5 mt-4">
-                            <img  class="" src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/Facebook.png?q=low&amp;webp=1&amp;alpha=1">
-                            <img  class="mx-1" src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/Youtube.png?q=low&amp;webp=1&amp;alpha=1">
-                            <img  class="mx-1" src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/twitter.png?q=low&amp;webp=1&amp;alpha=1">
-                            <img  clas=""src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/Instagram.png?q=low&amp;webp=1&amp;alpha=1">
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
+      </nav>
+
+      <header class="mt-4">
+        <div class="landingBanner" style="background:url(https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2253/Default/stores/chaldal/components/landingPage2/LandingPage/images/landingBannerTop.png) no-repeat center;background-size:cover;height:325px;padding-top:100px;">
+          <h1 class="header-title text-center font-weight-bold">Groceries delivered in 1 hour</h1>
+    
+          <div style="max-width: 50vw;" class="container-sm input-group flex-nowrap">
+            <input type="text" class="form-control" placeholder="Search for products (e.g. eggs, milk, potato)" aria-label="Username" aria-describedby="addon-wrapping">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2"><i class="fa fa-search" style="font-size:24px"></i></span>
+            </div>
+          </div>
+    
+        </div>
+       </header>
+      <!-- Product Categories -->
+      <section class="product-categories">
+        <h2 class="title text-center font-weight-bold">Our Product Categories</h2>
+        <div class="container category-cell-container">
+          <div class="row justify-content-center">
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+
+            <div class="category-cell border text-center rounded col-md-3 m-1">
+              <span class="align-middle category-name">Column</span>
+              <img class="category-icon img-fluid float-right" src="img/sample.png" alt="">
+            </div>
+          </div>
+      </section>
+
+      <!-- How to Order -->
+      <section class="mt-5 pb-5 px-3">
+        <h2 class="title text-center font-weight-bold">How to order from Chaldal ?</h2>
+        <div class="mt-4 row justify-content-center">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="black-icon carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/tutorial-1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/tutorial-2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/tutorial-3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="black-icon  carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="black-icon  carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Why People Love Chaldal -->
+      <section class="mt-5 pb-5 mx-3">
+        <h2 class="title text-center font-weight-bold">Why People
+          <svg width="50px" height="50px"
+            style="fill:#ff0000;stroke:#ff0000;display:inline-block;vertical-align:middle;" version="1.1"
+            viewBox="0 0 100 100">
+            <path
+              d="m83.332 27.082c-2.293-4.168-16.668-18.125-33.332 2.082-17.5-20.207-31.043-6.25-33.332-2.082-4.168 7.707-1.668 19.375 4.168 25l29.168 29.168 29.168-29.168c5.8281-5.625 8.3281-17.289 4.1602-25z">
+            </path>
+          </svg>
+          Chaldal</h1>
+
+          <div class="mt-4 row justify-content-center">
+            <div style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;"
+              class="tile border text-center rounded col-md-4">
+              <img style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;"
+                class="img-fluid" src="img/service.jpg" alt="">
+              <div style="border-width:3px !important" class="centered pt-4 border-bottom border-warning">
+                <div class="tile-text-title">
+                  Convenient & Quick
+                </div>
+                <div class="m-2 tile-inner-title">
+                  No waiting in traffic, no haggling, no worries carrying groceries, they're delivered right at your
+                  door.
+                </div>
+              </div>
+            </div>
+            <div style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;"
+              class="tile border text-center rounded col-md-4">
+              <img style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;"
+                class="img-fluid" src="img/service.jpg" alt="">
+              <div style="border-width:3px !important" class="centered pt-4 border-bottom border-success">
+                <div class="tile-text-title">
+                  Freshly Picked
+                </div>
+                <div class="m-2 tile-inner-title">
+                  Our fresh produce is sourced every morning, you get the best from us.
+                </div>
+              </div>
+            </div>
+            <div style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;"
+              class="tile border text-center rounded col-md-4">
+              <img style="background: #ffffff url('img/service.jpg') no-repeat right top; background-size: cover;"
+                class="img-fluid" src="img/service.jpg" alt="">
+              <div style="border-width:3px !important" class="centered pt-4 border-bottom border-danger">
+                <div class="tile-text-title">
+                  A wide range of Products
+                </div>
+                <div class="m-2 tile-inner-title">
+                  With 4000+ Products to choose from, forget scouring those aisles for hours.
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- Client Reaction -->
+      <section class="mt-5 pb-5">
+        <h2 class="title text-center font-weight-bold">What our clients are saying</h2>
+
+        <div class='container justify-content-center'>
+          <div id="quote-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Bottom Carousel Indicators -->
+            <ol class="black-icon carousel-indicators">
+              <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#quote-carousel" data-slide-to="1"></li>
+              <li data-target="#quote-carousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Carousel Slides / Quotes -->
+            <div class="carousel-inner">
+
+              <!-- Quote 1 -->
+              <div class="carousel-item active">
+
+                <div class="row">
+                  <div class="col-md-3 text-center">
+                    <img class="rounded-circle" src="http://www.reactiongifs.com/r/overbite.gif"
+                      style="width: 100px;height:100px;">
+                    <!--<img class="rounded-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+                  </div>
+                  <div class="col">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.</p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                    </footer>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Quote 2 -->
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-3 text-center">
+                    <img class="rounded-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg"
+                      style="width: 100px;height:100px;">
+                  </div>
+                  <div class="col">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.</p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                    </footer>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Quote 3 -->
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-3 text-center">
+                    <img class="rounded-circle"
+                      src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg"
+                      style="width: 100px;height:100px;">
+                  </div>
+                  <div class="col">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.</p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                    </footer>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Carousel Buttons Next/Prev -->
+            <a class="black-icon carousel-control-prev" href="#quote-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="black-icon carousel-control-next" href="#quote-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Corporate -->
+      <section class="mt-5 mb-5" id="corporate">
+        <div class="mainContainer">
+          <div class="corporate-content">
+            <div class="initialLabel">
+              <img src="img/brifcase.svg" alt="">
+              <h2>Do you own a business?</h2>
+              <h3>Become a Corporate Customer</h3>
+            </div>
+            <ul class="corporate-benefits">
+              <li class="corporate-benefits-item">
+                <i class="white-icon rounded fa fa-check fa-2x" aria-hidden="true"></i>
+                <img src="img/money.svg" alt="">
+                <h4>Special Corporate Prices</h4>
+              </li>
+              <li class="corporate-benefits-item">
+                <i class="white-icon rounded  fa fa-check fa-2x" aria-hidden="true"></i>
+                <img src="img/support.svg" alt="">
+                <h4>24 Hour Support</h4>
+              </li>
+              <li class="corporate-benefits-item"><i class="white-icon rounded  fa fa-check fa-2x"
+                  aria-hidden="true"></i>
+                <img src="img/delivery.svg" alt="">
+                <h4>Flexible Free Delivery</h4>
+              </li>
+            </ul>
+            <a href="/corporate">find out more</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Get App -->
+      <section class="mt-5">
+        <div class="header">
+          <div class="justify-content-center">
+          </div>
+          <div class="row">
+            <div class="pb-0 category-cell text-center rounded col-md-8">
+              <h2 class="title h4 text-center font-weight-bold">Be a part of our family</h2>
+              <div class="container mt-5">
+                <div id="phone-number-form" class="input-group justify-content-center">
+                  <input id="phone-number" type="tel" class="form-control">
+                  <div class="input-group-append">
+                    <span style="color: white;" class="input-group-text bg-danger" id="basic-addon2">Get App</span>
+                  </div>
+                </div>
+                <div class="alert alert-info" style="display: none;"></div>
+              </div>
+              <script>
+                $("#phone-number").intlTelInput({
+                  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+                });
+              </script>
+              <div class="row justify-content-center mt-4 mb-5">
+                <img style="width: 50%" class="col-md-4 col-sm-1 img-fluid" src="img/google-play.png"
+                  alt="Download chaldal Android app">
+                <img style="width: 50%" class="col-md-4 col-sm-1 img-fluid" src="img/app-store.png"
+                  alt="Download chaldal iOS app">
+              </div>
+            </div>
+
+            <div class="pb-0 mb-0 category-cell text-center rounded col">
+              <img class="img-fluid float-right" src="img/app-preview.png">
+            </div>
+          </div>
+      </section>
+
+      <!-- MAP -->
+      <section class="row bg-dark mx-1">
+        <div class=" col-md-7 container mapImage">
+          <img class="img-fluid" src="img/map.png" alt="">
+        </div>
+        <div class="companyLog col-md-5 text-center">
+          <h1 style="font-size: xx-large;" class="font-weight-bold text-warning">Dhaka</h1>
+          <h1 style="font-size: xx-large;">Total Order Placed</h1>
+          <h1 style="font-size: xx-large;" class="font-weight-bold text-warning">75213696</h1>
+          <h1 style="font-size: xx-large;">Total Saving</h1>
+          <h1 style="font-size: xx-large;" class="font-weight-bold text-warning">৳218,744,100</h1>
+          <h1 style="font-size: xx-large;">Time Saved</h1>
+          <h1 style="font-size: xx-large;" class="font-weight-bold text-warning">744,100 hrs</h1>
+        </div>
+      </section>
+      <section>
+        <div class="row bg-light-grey">
+          <div class="col-md-3">
+            <div class="d-flex deliverySystem mx-2 justify-content-center">
+              <img
+                src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/stores/chaldal/components/page/BrandComponent/images/1-hour.png?q=low&amp;webp=1&amp;alpha=1">
+              <p style="font-size:smaller; color: #272626" class="mx-3">1 hour delivery</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="d-flex deliverySystem mx-2 justify-content-center">
+              <img
+                src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/stores/chaldal/components/page/BrandComponent/images/cash-on-delivery.png?q=low&amp;webp=1&amp;alpha=1">
+              <p style="font-size:smaller; color: #272626">Cash on delivery</p>
+            </div>
+          </div>
+
+          <div class="col paysystem d-flex justify-content-center justify-content-md-end">
+            <p style="font-size:smaller; color: #272626">Pay With</p>
+            <img
+              src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/Amex.png?q=low&amp;webp=1&amp;alpha=1">
+            <img
+              src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/components/shared/NewFooter/images/bkash.png?v=1&amp;q=low&amp;webp=1&amp;alpha=1">
+            <img
+              src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/components/shared/NewFooter/images/mastercard.png?q=low&amp;webp=1&amp;alpha=1">
+            <img
+              src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2254/Default/components/shared/NewFooter/images/VIsa.png?q=low&amp;webp=1&amp;alpha=1">
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section class="mt-5">
+        <div class="row">
+          <div class="col-md-9 servicefooter">
+            <div class="mx-2 text-center text-md-left">
+              <img class="egg_set" src="img/chaldal-logo-small.png" alt="">
+              <p style="font-size: small; color: #615e58;">Chaldal.com is an online shop available in Dhaka,
+                Narayanganj, Chattogram and Jashore. We believe time is valuable to our fellow residents, and that they
+                should not have to waste hours in traffic, brave bad weather and wait in line just to buy basic
+                necessities like eggs! This is why Chaldal delivers everything you need right at your door-step and at
+                no additional cost.</p>
+            </div>
+            <div style="color: #615e58" class="row mx-2 my-5 justify-content-around">
+              <div class="col-md-3 col-sm-8 text-md-left text-center">
+                <h5>Customer Service</h5>
+                <hr class="m-0">
+                <a href="">
+                  <p class="m-0">Contact Us</p>
+                </a>
+                <a href="">
+                  <p class="m-0">FAQ</p>
+                </a>
+              </div>
+              <div class="col-md-3 col-sm-8 text-md-left text-center">
+                <h5>Customer Service</h5>
+                <hr class="m-0">
+                <a href="">
+                  <p class="m-0">Contact Us</p>
+                </a>
+                <a href="">
+                  <p class="m-0">FAQ</p>
+                </a>
+              </div>
+              <div class="col-md-3 col-sm-8 text-md-left text-center">
+                <h5>Customer Service</h5>
+                <hr class="m-0">
+                <a href="">
+                  <p class="m-0">Contact Us</p>
+                </a>
+                <a href="">
+                  <p class="m-0">FAQ</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mx-0">
+            <div class="row">
+              <div class="col-sm-12 d-flex mb-5 mt-4">
+                <img class="mr-2" width="50%"
+                  src=" https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/google_play_store.png?q=low&webp=1&alpha=1"
+                  alt="">
+                <img width="50%"
+                  src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/app_store.png?q=low&amp;webp=1&amp;alpha=1">
+              </div>
+            </div>
+            <div class="text-center text-md-right">
+              <img class=""
+                src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/phone_icon.png?q=low&amp;webp=1&amp;alpha=1">
+              <span class="font-weight-bold" style="font-size:x-large; font-weight: 700;">01889966334</span>
+              <p class="emailSupport"><span>or email</span> <strong style="font-weight: 700;">support@amjam.com</strong>
+              </p>
+            </div>
+            <div
+              class="justify-content-center justify-content-md-end text-md-right col-sm-12 social d-flex mr-0 pr-0 mb-5 mt-4">
+              <img class=""
+                src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/Facebook.png?q=low&amp;webp=1&amp;alpha=1">
+              <img class="mx-1"
+                src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/Youtube.png?q=low&amp;webp=1&amp;alpha=1">
+              <img class="mx-1"
+                src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/twitter.png?q=low&amp;webp=1&amp;alpha=1">
+              <img clas=""
+                src="https://chaldn.com/asset/Egg.Grocery.Fabric/Egg.Grocery.Web/1.5.0+DataCenter-Release-2255/Default/components/shared/NewFooter/images/Instagram.png?q=low&amp;webp=1&amp;alpha=1">
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+  </div>
 
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-        });
-    </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $(this).toggleClass('active');
+      });
+    });
+  </script>
 </body>
 
 </html>
