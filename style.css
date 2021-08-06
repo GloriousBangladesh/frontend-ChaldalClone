@@ -1,0 +1,312 @@
+.header-title {
+  font-size: 3.2vw;
+}
+
+.title {
+  font-size:x-large;
+}
+
+.product-categories {
+  margin: auto;
+  padding: 30px 15px;
+}
+
+.category-icon {
+  width: 30px
+}
+
+.category-cell {
+  padding: 1%;
+  margin: 5px;
+}
+
+.category-cell-container {
+  margin-top: 40px;
+  min-width: 100px;
+}
+
+.black-icon {
+  /* color: black;
+  outline: black; */
+  filter: invert(100%);
+}
+
+.white-icon {
+  /* color: black;
+  outline: black; */
+  font-size: x-large;
+  color: white;
+  background-color: green;
+}
+
+/* .tile {
+  position: relative;
+  text-align: center;
+} */
+
+.tile-text-title {
+  color: rgb(70, 68, 68);
+  font-size:x-large;
+  
+}
+
+.tile-inner-title {
+  color: rgb(70, 68, 68);
+  font-size:medium;
+  
+}
+
+.centered {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 100%;
+  height: 61%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(243, 243, 243, 0.685);
+}
+
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  /* right: 50%; */
+  top: auto;
+  bottom: 0px;
+  /* margin-right: -19px; */
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+#corporate {
+  font-family: segoe ui,Helvetica,droid sans,Arial,lucida grande,tahoma,verdana,arial,sans-serif;
+  font-size: 12px;
+  color: white;
+  line-height: normal;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-bottom: 40px;
+  background-image: url(img/banner-corporate-page.jpg) ;
+  background-size: cover;
+  background-position: center;
+  position: relative;  
+}
+
+#corporate a {
+  font-family: segoe ui,Helvetica,droid sans,Arial,lucida grande,tahoma,verdana,arial,sans-serif;
+  line-height: normal;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  padding: 8px 15px 9px;
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff686e;
+  transition: all 300ms ease-in-out;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.3);
+  margin-bottom: 80px;
+}
+
+.mainContainer {
+  /* width: 100%; */
+  height: 100%;
+  background-color: #045b76bd;
+  background-size: cover;
+}
+
+.corporate-content {
+  font-family: segoe ui,Helvetica,droid sans,Arial,lucida grande,tahoma,verdana,arial,sans-serif;
+  font-size: 12px;
+  color: white;
+  line-height: normal;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+.initialLabel {
+  font-family: segoe ui,Helvetica,droid sans,Arial,lucida grande,tahoma,verdana,arial,sans-serif;
+  font-size: 12px;
+  color: white;
+  line-height: normal;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  display: table;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0 0 15px;
+}
+
+.corporate-benefits {
+  font-family: segoe ui,Helvetica,droid sans,Arial,lucida grande,tahoma,verdana,arial,sans-serif;
+  font-size: 12px;
+  color: white;
+  line-height: normal;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.corporate-benefits-item {
+  font-family: segoe ui,Helvetica,droid sans,Arial,lucida grande,tahoma,verdana,arial,sans-serif;
+  font-size: 12px;
+  color: white;
+  line-height: normal;
+  list-style: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  padding: 15px;
+  margin: 0 15px 15px;
+  display: inline-block;
+  border-radius: 5px;
+  width: 195px;
+  background-color: rgba(0,0,0,.2);
+}
+
+.tick {
+  -webkit-text-size-adjust: 100%;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-weight: 400;
+  font-family: segoe ui,Helvetica,droid sans,Arial,lucida grande,tahoma,verdana,arial,sans-serif;
+  font-size: 12px;
+  color: white;
+  line-height: normal;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
