@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/frontend-ChaldalClone/static/css/main.cd954f44.chunk.css",
+    "main.js": "/frontend-ChaldalClone/static/js/main.ea4ba762.chunk.js",
+    "main.js.map": "/frontend-ChaldalClone/static/js/main.ea4ba762.chunk.js.map",
+    "runtime-main.js": "/frontend-ChaldalClone/static/js/runtime-main.0d17046a.js",
+    "runtime-main.js.map": "/frontend-ChaldalClone/static/js/runtime-main.0d17046a.js.map",
+    "static/css/2.8306dfe5.chunk.css": "/frontend-ChaldalClone/static/css/2.8306dfe5.chunk.css",
+    "static/js/2.e1ad97c2.chunk.js": "/frontend-ChaldalClone/static/js/2.e1ad97c2.chunk.js",
+    "static/js/2.e1ad97c2.chunk.js.map": "/frontend-ChaldalClone/static/js/2.e1ad97c2.chunk.js.map",
+    "static/js/3.9537b5e0.chunk.js": "/frontend-ChaldalClone/static/js/3.9537b5e0.chunk.js",
+    "static/js/3.9537b5e0.chunk.js.map": "/frontend-ChaldalClone/static/js/3.9537b5e0.chunk.js.map",
+    "index.html": "/frontend-ChaldalClone/index.html",
+    "static/css/2.8306dfe5.chunk.css.map": "/frontend-ChaldalClone/static/css/2.8306dfe5.chunk.css.map",
+    "static/css/main.cd954f44.chunk.css.map": "/frontend-ChaldalClone/static/css/main.cd954f44.chunk.css.map",
+    "static/js/2.e1ad97c2.chunk.js.LICENSE.txt": "/frontend-ChaldalClone/static/js/2.e1ad97c2.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/frontend-ChaldalClone/static/media/banner-corporate-page.5a866b8e.jpg",
+    "static/media/intlTelInput.css": "/frontend-ChaldalClone/static/media/flags@2x.9d5328fb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d17046a.js",
+    "static/css/2.8306dfe5.chunk.css",
+    "static/js/2.e1ad97c2.chunk.js",
+    "static/css/main.cd954f44.chunk.css",
+    "static/js/main.ea4ba762.chunk.js"
+  ]
+}
