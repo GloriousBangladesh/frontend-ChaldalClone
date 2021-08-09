@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { useStateValue } from "./StateProvider";
 import { Link } from "react-router-dom";
+import { propTypes } from "react-bootstrap/esm/Image";
 
-function Header() {
+function Header(props) {
   const [{ basket, city }, dispatch] = useStateValue();
-
-
-
+  
   const sidebarToggle = () => {
     const sidebarBtn = document.getElementById("sidebarCollapse");
     const sidebar = document.getElementById("sidebar");
@@ -98,6 +97,7 @@ function Header() {
               <div
                 id="signin-button"
                 className="col-md-3 text-center border-right navzindex"
+                onClick={props.loginFormToggle}
               >
                 Sign in
               </div>

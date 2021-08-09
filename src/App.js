@@ -3,7 +3,7 @@ import "./css/style.css";
 import "./css/twemoji-awesome.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'intl-tel-input/build/css/intlTelInput.css';
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./Header";
 import { useStateValue } from "./StateProvider";
@@ -22,47 +22,69 @@ import InstallApp from "./homepage-sections/install-app"
 import Map from "./homepage-sections/map"
 import GreyRow from "./homepage-sections/grey-row"
 import Footer from "./homepage-sections/footer";
+import LoginForm from "./homepage-sections/login-form";
 
 function App() {
   const [{ basket }, dispatch] = useStateValue();
+  
+  const [loginForm, setLoginForm] = useState(false);
+
+  const loginFormToggle = () => {
+    var formElement = document.getElementsByClassName("loginbox")[0];
+    var wrapperElement = document.getElementsByClassName("wrapper")[0];
+
+    if(loginForm === false){
+      wrapperElement.classList.add("greyOverlay")
+      setLoginForm(!loginForm);
+      formElement.style.opacity = "1";
+    }
+    else{
+      wrapperElement.classList.remove("greyOverlay")
+      setLoginForm(!loginForm);
+      formElement.style.opacity = "0";
+    }
+  }
+
 
   useEffect(() => {}, []);
 
   return (
-    <div className="wrapper">
-      <Router>
-        <Sidebar/>
-        <div id="content">
-          <Header />
-          <Switch>
-            <Route path="/select-city">
-              <City />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/products/:product">
-              <ShowProduct />
-            </Route>
-            <Route path="/checkout">
-              <Checkout />
-            </Route>
-            <Route path="/">
-              <HeaderBanner/>
-              <ProductCategories/>
-              <HowToOrder/>
-              <LoveChaldal/>
-              <ClientReaction/>
-              <Corporate/>
-              <InstallApp/>
-              <Map/>
-              <GreyRow/>
-              <Footer/>
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-
+    <div>
+      <LoginForm loginFormToggle={loginFormToggle}/>
+      <div className="wrapper">
+        <Router>
+          <Sidebar/>
+          <div id="content">
+            <Header loginFormToggle={loginFormToggle}/>
+            <Switch>
+              <Route path="/select-city">
+                <City />
+              </Route>
+              <Route path="/login">
+                <Login />
+              </Route>
+              <Route path="/products/:product">
+                <ShowProduct />
+              </Route>
+              <Route path="/checkout">
+                <Checkout />
+              </Route>
+              <Route path="/">
+                <HeaderBanner/>
+                <ProductCategories/>
+                <HowToOrder/>
+                <LoveChaldal/>
+                <ClientReaction/>
+                <Corporate/>
+                <InstallApp/>
+                <Map/>
+                <GreyRow/>
+                <Footer/>
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </div>
     </div>
   );
 }
