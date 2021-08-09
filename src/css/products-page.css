@@ -1,0 +1,43 @@
+.imgs{ 
+    background-color: transparent;
+    /* width: 95%;
+    height: 250px;
+    margin: auto 0; */
+    width: 100%;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 170px;
+    max-height: 170px;
+
+}
+.product__body{
+    text-align: center;
+}
+
+.addbg{
+    background-color:#FF8182 !important;;
+    padding: 8px;
+
+
+}
+.icondet{
+    background-color: #FF8182!important;
+    padding: 10px;
+}
+.weight{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .spandet {
+     display: flex;
+     flex-direction: row;
+    
+     
+    }
+    .addbg{
+        background-color:#FF8182;
+        padding: 5px;
+        margin: 0 5px;
+    }
+  }

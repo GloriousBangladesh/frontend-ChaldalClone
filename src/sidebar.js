@@ -1,7 +1,14 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 import Collapse from 'react-bootstrap/Collapse';
 
 function Sidebar() {
+
+  const history = useHistory();
+  const clicked = (str) => {
+    history.push("/products/" + str);
+    console.log(str);
+  }
   const [open, setOpen] = useState(
     {
       1: false,
@@ -98,63 +105,63 @@ function Sidebar() {
         <ul className="list-unstyled components">
         <p>Category List</p>
         <li className="sidebar-item-cursor">
-          <p href="#"><i className="me-2 twa twa-lg twa-shopping-bags"></i> Popular</p>
+          <p onClick={clicked}><i className="me-2 twa twa-lg twa-shopping-bags"></i> Popular</p>
         </li>
         <li className="sidebar-item-cursor">
-          <p href="#"><i className="me-2 twa twa-lg twa-roll-of-paper"></i> Hygiene</p>
+          <p onClick={clicked}><i className="me-2 twa twa-lg twa-roll-of-paper"></i> Hygiene</p>
         </li>
         <li className="sidebar-item-cursor">
-          <p href="#"><i className="me-2 twa twa-lg twa-high-voltage"></i> Flash Sales</p>
+          <p onClick={clicked}><i className="me-2 twa twa-lg twa-high-voltage"></i> Flash Sales</p>
         </li>
         <li className="sidebar-item-cursor">
           <p style={{display: "flex"}} onClick={() => {setOpen({...open,1:!open[1] });}} aria-controls="BabyCareSubmenu" aria-expanded={open[1]} className="justify-content-between"><span><i className="me-2 twa twa-lg twa-baby-bottle"></i> Baby Care </span><span><i className="fa fa-angle-down" aria-hidden="true"></i></span></p>
           <Collapse in={open[1]}>
           <ul id="BabyCareSubmenu">
             <li className="sidebar-item-cursor">
-              <p href="#">Newborn Essensials</p>
+              <p onClick={clicked}>Newborn Essensials</p>
             </li>
             <li className="sidebar-item-cursor">
            <p style={{display: "flex"}} onClick={() => {setOpen({...open,2:!open[2] });}} aria-controls="DiaperWipeSubmenu" aria-expanded={open[2]} className="justify-content-between"><span>Diapers & Wipes</span> <span><i className="fa fa-angle-down" aria-hidden="true"></i></span></p>
               <Collapse in={open[2]}>
               <ul id="DiaperWipeSubmenu" aria-controls="DiaperWipeSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Wipes</p>
+                  <p onClick={clicked}>Wipes</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Diapers</p>
+                  <p onClick={clicked}>Diapers</p>
                 </li>
                 </ul>
               </Collapse>
               
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Feeders</p>
+              <p onClick={clicked}>Feeders</p>
             </li>
             <li className="sidebar-item-cursor">
            <p style={{display: "flex"}} onClick={() => {setOpen({...open,3:!open[3] });}} aria-controls="FoodingSubmenu" aria-expanded={open[3]} className="justify-content-between"><span>Fooding</span> <span><i className="fa fa-angle-down" aria-hidden="true"></i></span></p>
               <Collapse in={open[3]}>
               <ul id="FoodingSubmenu" aria-controls="FoodingSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Formula</p>
+                  <p onClick={clicked}>Formula</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Baby & Toddler Food</p>
+                  <p onClick={clicked}>Baby & Toddler Food</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Milk, Juice & Drinks</p>
+                  <p onClick={clicked}>Milk, Juice & Drinks</p>
                 </li>
                 </ul>
               </Collapse>
               
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Bath & Skincare</p>
+              <p onClick={clicked}>Bath & Skincare</p>
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Baby Accessories</p>
+              <p onClick={clicked}>Baby Accessories</p>
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Baby Oral Care</p>
+              <p onClick={clicked}>Baby Oral Care</p>
             </li>
             </ul>
           </Collapse>
@@ -165,19 +172,19 @@ function Sidebar() {
           <Collapse in={open[4]}>
           <ul id="PetcareSubmenu" aria-controls="PetcareSubmenu">
             <li className="sidebar-item-cursor">
-              <p href="#">Kitten Food</p>
+              <p onClick={clicked}>Kitten Food</p>
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Cat Food</p>
+              <p onClick={clicked}>Cat Food</p>
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Dog Food</p>
+              <p onClick={clicked}>Dog Food</p>
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Other Pet Foods</p>
+              <p onClick={clicked}>Other Pet Foods</p>
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Pet Accessories</p>
+              <p onClick={clicked}>Pet Accessories</p>
             </li>
             </ul>
           </Collapse>
@@ -193,10 +200,10 @@ function Sidebar() {
               <ul id="FruitsvegSubmenu" aria-controls="FruitsvegSubmenu">
 
                 <li className="sidebar-item-cursor">
-                  <p href="#">Fresh Fruits</p>
+                  <p onClick={clicked}>Fresh Fruits</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Fresh Vegetables</p>
+                  <p onClick={clicked}>Fresh Vegetables</p>
                 </li>
                 </ul>
               </Collapse>
@@ -208,16 +215,16 @@ function Sidebar() {
               <ul id="BreakfastSubmenu" aria-controls="BreakfastSubmenu">
 
                 <li className="sidebar-item-cursor">
-                  <p href="#">Local Breakfast</p>
+                  <p onClick={clicked}>Local Breakfast</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Energy Boosters</p>
+                  <p onClick={clicked}>Energy Boosters</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Cereals</p>
+                  <p onClick={clicked}>Cereals</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">jam & Spreads</p>
+                  <p onClick={clicked}>jam & Spreads</p>
                 </li>
                 </ul>
               </Collapse>
@@ -229,22 +236,22 @@ function Sidebar() {
               <Collapse in={open[8]}>
               <ul id="BeveragesSubmenu" aria-controls="BeveragesSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Tea</p>
+                  <p onClick={clicked}>Tea</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Coffee</p>
+                  <p onClick={clicked}>Coffee</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Juice</p>
+                  <p onClick={clicked}>Juice</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Soft Drinks</p>
+                  <p onClick={clicked}>Soft Drinks</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Water</p>
+                  <p onClick={clicked}>Water</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Syrups & Powder Drinks</p>
+                  <p onClick={clicked}>Syrups & Powder Drinks</p>
                 </li>
                 </ul>
               </Collapse>
@@ -255,16 +262,16 @@ function Sidebar() {
               <Collapse in={open[9]}>
               <ul id="MeatfishSubmenu" aria-controls="MeatfishSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Meat</p>
+                  <p onClick={clicked}>Meat</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Frozen Fish</p>
+                  <p onClick={clicked}>Frozen Fish</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Dried Fish</p>
+                  <p onClick={clicked}>Dried Fish</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Tofu & Meat Alternatives</p>
+                  <p onClick={clicked}>Tofu & Meat Alternatives</p>
                 </li>
                 </ul>
               </Collapse>
@@ -276,34 +283,34 @@ function Sidebar() {
               <Collapse in={open[10]}>
               <ul id="SnacksSubmenu" aria-controls="SnacksSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Noodles</p>
+                  <p onClick={clicked}>Noodles</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Soup</p>
+                  <p onClick={clicked}>Soup</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Pasta & Macaroni</p>
+                  <p onClick={clicked}>Pasta & Macaroni</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Candy & Chocolate</p>
+                  <p onClick={clicked}>Candy & Chocolate</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Local Snacks</p>
+                  <p onClick={clicked}>Local Snacks</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Chips & Pretzels</p>
+                  <p onClick={clicked}>Chips & Pretzels</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Popcorn & Nuts</p>
+                  <p onClick={clicked}>Popcorn & Nuts</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Buiscuits</p>
+                  <p onClick={clicked}>Buiscuits</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Salad Dressing</p>
+                  <p onClick={clicked}>Salad Dressing</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Sauces</p>
+                  <p onClick={clicked}>Sauces</p>
                 </li>
                 </ul>
               </Collapse>
@@ -315,22 +322,22 @@ function Sidebar() {
               <Collapse in={open[11]}>
               <ul id="DairySubmenu" aria-controls="DairySubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Liquid & UHT Milk</p>
+                  <p onClick={clicked}>Liquid & UHT Milk</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">butter & Sour Cream</p>
+                  <p onClick={clicked}>butter & Sour Cream</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Cheese</p>
+                  <p onClick={clicked}>Cheese</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Eggs</p>
+                  <p onClick={clicked}>Eggs</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Powder Milk & Cream</p>
+                  <p onClick={clicked}>Powder Milk & Cream</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Yogurt & Sweet</p>
+                  <p onClick={clicked}>Yogurt & Sweet</p>
                 </li>
                 </ul>
               </Collapse>
@@ -341,10 +348,10 @@ function Sidebar() {
               <Collapse in={open[12]}>
               <ul id="FrozencanSubmenu" aria-controls="FrozencanSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Frozen Snacks</p>
+                  <p onClick={clicked}>Frozen Snacks</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Canned Food</p>
+                  <p onClick={clicked}>Canned Food</p>
                 </li>
                 </ul>
               </Collapse>
@@ -355,22 +362,22 @@ function Sidebar() {
               <Collapse in={open[13]}>
               <ul id="BreadbakeSubmenu" aria-controls="BreadbakeSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Cookies</p>
+                  <p onClick={clicked}>Cookies</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">bakery Snacks</p>
+                  <p onClick={clicked}>bakery Snacks</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Breads</p>
+                  <p onClick={clicked}>Breads</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Dips & Spreads</p>
+                  <p onClick={clicked}>Dips & Spreads</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Honey</p>
+                  <p onClick={clicked}>Honey</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Cakes</p>
+                  <p onClick={clicked}>Cakes</p>
                 </li>
                 </ul>
               </Collapse>
@@ -382,19 +389,19 @@ function Sidebar() {
               <Collapse in={open[14]}>
               <ul id="BakingSubmenu" aria-controls="BakingSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Nuts & Dried Fruits</p>
+                  <p onClick={clicked}>Nuts & Dried Fruits</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Baking Tools</p>
+                  <p onClick={clicked}>Baking Tools</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Baking & Desset Mixes</p>
+                  <p onClick={clicked}>Baking & Desset Mixes</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Baking Ingredients</p>
+                  <p onClick={clicked}>Baking Ingredients</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Flour</p>
+                  <p onClick={clicked}>Flour</p>
                 </li>
                 </ul>
               </Collapse>
@@ -404,47 +411,47 @@ function Sidebar() {
                 <Collapse in={open[15]}>
                 <ul id="CookingSubmenu" aria-controls="CookingSubmenu">
                   <li className="sidebar-item-cursor">
-                    <p href="#">Rice</p>
+                    <p onClick={clicked}>Rice</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Premium Ingredients</p>
+                    <p onClick={clicked}>Premium Ingredients</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#"> Colors & Flavours</p>
+                    <p onClick={clicked}> Colors & Flavours</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#"> Pickles</p>
+                    <p onClick={clicked}> Pickles</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#"> Spices</p>
+                    <p onClick={clicked}> Spices</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Oil</p>
+                    <p onClick={clicked}>Oil</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Ghee</p>
+                    <p onClick={clicked}>Ghee</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Ready Mix</p>
+                    <p onClick={clicked}>Ready Mix</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Salt & Sugar</p>
+                    <p onClick={clicked}>Salt & Sugar</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Dal or Lentil</p>
+                    <p onClick={clicked}>Dal or Lentil</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Special Ingredients</p>
+                    <p onClick={clicked}>Special Ingredients</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Shemai & Shuji</p>
+                    <p onClick={clicked}>Shemai & Shuji</p>
                   </li>
                   </ul>
                 </Collapse>
                 
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Diabetic Food</p>
+                <p onClick={clicked}>Diabetic Food</p>
               </li>
               </li>
               </ul>
@@ -456,37 +463,37 @@ function Sidebar() {
             <Collapse in={open[16]}>
             <ul id="HomeCleaningSubmenu" aria-controls="HomeCleaningSubmenu">
               <li className="sidebar-item-cursor">
-                <p href="#">Air Fresheners</p>
+                <p onClick={clicked}>Air Fresheners</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Dish Detergents</p>
+                <p onClick={clicked}>Dish Detergents</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Cleaning Supplies</p>
+                <p onClick={clicked}>Cleaning Supplies</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Kitchen Accessories</p>
+                <p onClick={clicked}>Kitchen Accessories</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Laundry</p>
+                <p onClick={clicked}>Laundry</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Napkins & Paper Products</p>
+                <p onClick={clicked}>Napkins & Paper Products</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Pest Control</p>
+                <p onClick={clicked}>Pest Control</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Shoe Care</p>
+                <p onClick={clicked}>Shoe Care</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Tableware & Trash Bags</p>
+                <p onClick={clicked}>Tableware & Trash Bags</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Food Storage</p>
+                <p onClick={clicked}>Food Storage</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Cleaning Accessories</p>
+                <p onClick={clicked}>Cleaning Accessories</p>
               </li>
               </ul>
             </Collapse>
@@ -497,16 +504,16 @@ function Sidebar() {
             <Collapse in={open[17]}>
             <ul id="OfficeSubmenu" aria-controls="OfficeSubmenu">
               <li className="sidebar-item-cursor">
-                <p href="#">Batteries</p>
+                <p onClick={clicked}>Batteries</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Writing & Drawing</p>
+                <p onClick={clicked}>Writing & Drawing</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Organizing</p>
+                <p onClick={clicked}>Organizing</p>
               </li>
               <li className="sidebar-item-cursor">
-                <p href="#">Printing</p>
+                <p onClick={clicked}>Printing</p>
               </li>
               </ul>
             </Collapse>
@@ -521,25 +528,25 @@ function Sidebar() {
                 <Collapse in={open[19]}>
                 <ul id="HealthcaSubmenu" aria-controls="HealthcaSubmenu">
                   <li className="sidebar-item-cursor">
-                    <p href="#">Food Suppliment</p>
+                    <p onClick={clicked}>Food Suppliment</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Herbal & Digestive Aids</p>
+                    <p onClick={clicked}>Herbal & Digestive Aids</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">First Aid</p>
+                    <p onClick={clicked}>First Aid</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Family Planning</p>
+                    <p onClick={clicked}>Family Planning</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Antiseptics</p>
+                    <p onClick={clicked}>Antiseptics</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Adult Diapers</p>
+                    <p onClick={clicked}>Adult Diapers</p>
                   </li>
                   <li className="sidebar-item-cursor">
-                    <p href="#">Keto Food</p>
+                    <p onClick={clicked}>Keto Food</p>
                   </li>
                   </ul>
                 </Collapse>
@@ -548,31 +555,31 @@ function Sidebar() {
               <Collapse in={open[20]}>
               <ul id="PersonalSubmenu" aria-controls="PersonalSubmenu">
                 <li className="sidebar-item-cursor">
-                  <p href="#">Clothing Essentials</p>
+                  <p onClick={clicked}>Clothing Essentials</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Women's Care</p>
+                  <p onClick={clicked}>Women's Care</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Men's Care</p>
+                  <p onClick={clicked}>Men's Care</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Hair Color</p>
+                  <p onClick={clicked}>Hair Color</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Oral Care</p>
+                  <p onClick={clicked}>Oral Care</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Skin Care</p>
+                  <p onClick={clicked}>Skin Care</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Handwash</p>
+                  <p onClick={clicked}>Handwash</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Tissue & Wipes</p>
+                  <p onClick={clicked}>Tissue & Wipes</p>
                 </li>
                 <li className="sidebar-item-cursor">
-                  <p href="#">Telcom Powder</p>
+                  <p onClick={clicked}>Telcom Powder</p>
                 </li>
                 </ul>
               </Collapse>
@@ -587,20 +594,20 @@ function Sidebar() {
           <Collapse in={open[21]}>
           <ul id="HomeappSubmenu" aria-controls="HomeappSubmenu">
             <li className="sidebar-item-cursor">
-              <p href="#">Lights & Electrical</p>
+              <p onClick={clicked}>Lights & Electrical</p>
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Tools & Hardware</p>
+              <p onClick={clicked}>Tools & Hardware</p>
             </li>
             <li className="sidebar-item-cursor">
-              <p href="#">Kitchen Appliances</p>
+              <p onClick={clicked}>Kitchen Appliances</p>
             </li>
             </ul>
           </Collapse>
 
         </li>
-        <li className="sidebar-item-cursor">
-          <p href="#"><i className="me-2 twa twa-lg twa-gear"></i> Vehicle Essensials</p>
+        <li onClick={() => clicked("meat")} className="sidebar-item-cursor">
+          <p><i className="me-2 twa twa-lg twa-gear"></i> Vehicle Essensials</p>
         </li>
         </ul>
     </nav>

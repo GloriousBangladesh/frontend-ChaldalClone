@@ -14,7 +14,7 @@ function LoginForm(props) {
                     </div>
                     
                     <div className="social-login">
-                        <button className="btn facebook-btn social-btn" type="button"><span><i className="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
+                        <button className="btn facebook-btn social-btn" type="button"><span><i className="fas fa-facebook-circle" aria-hidden="true"></i> Sign in with Facebook</span> </button>
                     </div>
                     
                     <div className="social-login">
@@ -29,7 +29,7 @@ function LoginForm(props) {
                     <h6 className="text-center my-5 mh">PLEASE ENTER YOUR MOBILE PHONE NUMBER</h6>
                     
                     <div className="text-center mt-2">
-                        <form id="login" onsubmit="process(event)">
+                        <form id="login" onSubmit="process(event)">
                     
                         
                         <input  id="phone" type="tel" name="phone" />

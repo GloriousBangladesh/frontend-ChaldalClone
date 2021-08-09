@@ -1,6 +1,8 @@
 import "./App.css";
 import "./css/style.css";
 import "./css/twemoji-awesome.css";
+import "./css/products-page.css";
+import "./css/login-form.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'intl-tel-input/build/css/intlTelInput.css';
 import React, { useState, useEffect } from "react";
@@ -34,6 +36,7 @@ function App() {
     var wrapperElement = document.getElementsByClassName("wrapper")[0];
 
     if(loginForm === false){
+      formElement.style.display = "block";
       wrapperElement.classList.add("greyOverlay")
       setLoginForm(!loginForm);
       formElement.style.opacity = "1";
@@ -42,6 +45,7 @@ function App() {
       wrapperElement.classList.remove("greyOverlay")
       setLoginForm(!loginForm);
       formElement.style.opacity = "0";
+      formElement.style.display = "none";
     }
   }
 

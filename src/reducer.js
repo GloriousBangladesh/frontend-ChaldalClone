@@ -12,15 +12,18 @@ function reducer(state, action) {
   switch (action.type) {
     case "ADD_TO_BASKET":
       const [basket, hash] = addElement(state.basket, action.item, state.hash);
+      console.log(basket);
       return {
         ...state,
         basket: basket,
         hash: hash,
         total: state.total + action.price,
       };
+      
       break;
     case "REMOVE_FROM_BASKET":
       const [sket, sh] = deleteElement(state.basket, action.id, state.hash);
+      console.log(sket);
       return {
         ...state,
         basket: sket,
@@ -33,6 +36,7 @@ function reducer(state, action) {
       break;
     case "DEL":
       const [asket, ash] = del(state.basket, action.id, state.hash);
+      console.log(asket);
       return {
         ...state,
         basket: asket,
