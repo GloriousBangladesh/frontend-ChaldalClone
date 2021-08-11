@@ -50,7 +50,16 @@ function App() {
   }
 
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (localStorage.getItem("name")) {
+      dispatch({
+        type:"LOGIN",
+        jwt: localStorage.getItem("jwt"),
+        name: localStorage.getItem("name"),
+        email: localStorage.getItem("email"),
+      });
+    }
+  }, []);
 
   return (
     <div>
@@ -68,10 +77,13 @@ function App() {
                 <Login />
               </Route>
               <Route path="/products/:product">
-                <ShowProduct />
+                <ShowProduct purpose="category"/>
               </Route>
               <Route path="/checkout">
                 <Checkout />
+              </Route>
+              <Route path="/search/:query">
+                <ShowProduct purpose="search"/>
               </Route>
               <Route path="/">
                 <HeaderBanner/>

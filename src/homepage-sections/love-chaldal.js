@@ -15,10 +15,10 @@ function LoveChaldal() {
         Chaldal</h2>
 
         <div className="mt-4 row justify-content-center">
-            <div style={{background: "#ffffff url('img/service1.jpg') no-repeat right top", backgroundSize: "cover"}}
+            <div style={{background: "#ffffff url('/img/service1.jpg') no-repeat right top", backgroundSize: "cover"}}
             className="tile border text-center rounded col-md-4">
-            <img style={{background: "#ffffff url('img/service1.jpg') no-repeat right top", backgroundSize: "cover"}}
-                className="img-fluid" src="img/service1.jpg" alt=""/>
+            <img style={{background: "#ffffff url('/img/service1.jpg') no-repeat right top", backgroundSize: "cover"}}
+                className="img-fluid" src="/img/service1.jpg" alt=""/>
             <div style={{borderWidth:"3px !important"}} className="centered pt-4 border-bottom border-warning">
                 <div className="tile-text-title">
                 Convenient & Quick

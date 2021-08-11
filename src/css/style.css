@@ -705,7 +705,7 @@
   
   
   @media (max-width: 768px) {
-      #sidebar {
+      /* #sidebar {
           margin-left: -250px;
           transform: rotateY(90deg);
       }
@@ -731,7 +731,7 @@
       }
       #sidebarCollapse.active span:last-of-type {
           transform: rotate(-45deg) translate(1px, -1px);
-      }
+      } */
   
   }
   

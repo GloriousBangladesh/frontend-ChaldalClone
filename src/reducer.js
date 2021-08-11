@@ -6,13 +6,32 @@ export const initialState = {
   city: "Dhaka",
   hash: {},
   total: 0,
+  pros: [],
 };
 
 function reducer(state, action) {
   switch (action.type) {
+    case "SHOW":
+      return {
+        ...state,
+        pros:[...action.pros],
+      }
+      break;
+    
+    case "LOGIN":
+      return {
+        ...state,
+        user: {
+          jwt: action.jwt,
+          name: action.name,
+          email: action.email,
+        },
+      };
+
+      break;
     case "ADD_TO_BASKET":
       const [basket, hash] = addElement(state.basket, action.item, state.hash);
-      console.log(basket);
+      //console.log(basket);
       return {
         ...state,
         basket: basket,
@@ -23,7 +42,7 @@ function reducer(state, action) {
       break;
     case "REMOVE_FROM_BASKET":
       const [sket, sh] = deleteElement(state.basket, action.id, state.hash);
-      console.log(sket);
+      //console.log(sket);
       return {
         ...state,
         basket: sket,
@@ -36,7 +55,7 @@ function reducer(state, action) {
       break;
     case "DEL":
       const [asket, ash] = del(state.basket, action.id, state.hash);
-      console.log(asket);
+      //console.log(asket);
       return {
         ...state,
         basket: asket,

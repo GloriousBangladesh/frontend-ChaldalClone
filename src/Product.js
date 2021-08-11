@@ -31,7 +31,7 @@ function Product({ id, title, image, price, measure, description }) {
       id: id,
       pr: price,
     });
-    // console.log(basket);
+    //console.log(basket);
   };
 
   let a = <button onClick={addProduct}>Buy</button>;
@@ -41,6 +41,9 @@ function Product({ id, title, image, price, measure, description }) {
       a = <button onClick={addProduct}>{hash[id]} in basket</button>;
     }
   }
+
+  //console.log(basket);
+  console.log(basket);
 
   return (
     <div className="col-md-3 justify-content-center m-3">
