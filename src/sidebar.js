@@ -36,10 +36,27 @@ function Sidebar() {
       23: false, 
     }
   );
+  
+  let cartElement = document.getElementById("mycartSidebar");
+
+  function toggleCart() {
+    console.log("clicked");
+    
+    if(cartElement.style.width > 0){
+      cartElement.style.width = "0px";
+      
+    }
+    else{
+      cartElement.style.width = "320px";
+    }
+    
+  }
 
   return (
     <nav id="sidebar" style={{top: "0",left: "0",height: "100vh",overflowY: "scroll"}}>
-      <div className="sidebar-header"></div>
+      <div style={{cursor: "pointer"}} onClick={toggleCart} className="sidebar-header">
+        <span> Open Cart </span>
+      </div>
 
         <ul className="list-unstyled components">
         <p>Category List</p>

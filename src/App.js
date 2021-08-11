@@ -25,6 +25,7 @@ import Map from "./homepage-sections/map"
 import GreyRow from "./homepage-sections/grey-row"
 import Footer from "./homepage-sections/footer";
 import LoginForm from "./homepage-sections/login-form";
+import Cart from "./homepage-sections/cart";
 
 function App() {
   const [{ basket }, dispatch] = useStateValue();
@@ -68,6 +69,8 @@ function App() {
         <Router>
           <Sidebar/>
           <div id="content">
+            {/* <Cart/> */}
+            <Checkout />
             <Header loginFormToggle={loginFormToggle}/>
             <Switch>
               <Route path="/select-city">
@@ -79,9 +82,9 @@ function App() {
               <Route path="/products/:product">
                 <ShowProduct purpose="category"/>
               </Route>
-              <Route path="/checkout">
+              {/* <Route path="/checkout">
                 <Checkout />
-              </Route>
+              </Route> */}
               <Route path="/search/:query">
                 <ShowProduct purpose="search"/>
               </Route>
