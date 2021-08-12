@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useStateValue } from "./StateProvider";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import { propTypes } from "react-bootstrap/esm/Image";
 import Sidebar from "./sidebar";
 import axios from "axios";
+
 
 function Header(props) {
   const history = useHistory();
@@ -23,7 +24,10 @@ function Header(props) {
             pros:res.data.result,
             prev:pros
           });
+          
           history.push("/search/" + str);
+          //history.pop();
+          
         }
         
       })
@@ -31,10 +35,14 @@ function Header(props) {
         console.log(err);
       });
 
-    
-    
     //console.log(str);
   }
+
+  window.onpopstate=function()
+  {
+    history.push("/");
+  }
+
 
   const sidebarToggle = () => {
     const sidebarBtn = document.getElementById("sidebarCollapse");

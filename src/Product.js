@@ -34,16 +34,18 @@ function Product({ id, title, image, price, measure, description }) {
     //console.log(basket);
   };
 
-  let a = <button onClick={addProduct}>Buy</button>;
+  let a = <div className="btn addbg col-sm-7" onClick={addProduct}>Add to bag</div>
 
   if (hash[id]) {
     if (hash[id] !== 0) {
-      a = <button onClick={addProduct}>{hash[id]} in basket</button>;
+      a = <div className="btn addbg col-sm-7" onClick={addProduct}>{hash[id]} in Bag</div>
     }
   }
 
+
+
   //console.log(basket);
-  console.log(basket);
+  //console.log(basket);
 
   return (
     <div className="col-md-3 justify-content-center m-3">
@@ -54,7 +56,7 @@ function Product({ id, title, image, price, measure, description }) {
           <h5> <strong>৳ {price}</strong> </h5>
           <div className="row justify-content-center">
             <div className="btn col-sm-2 icondet" onClick={decrement}><i className="fas fa-minus"></i></div>
-            <div className="btn addbg col-sm-7" onClick={addProduct}>Add to bag</div>
+            {a}
             <div className="btn col-sm-2 icondet" onClick={addProduct}><i className="fas fa-plus" aria-hidden="true"></i></div>
           </div>
           

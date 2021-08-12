@@ -9,6 +9,7 @@ export const initialState = {
   pros: [],
 };
 
+
 function reducer(state, action) {
   switch (action.type) {
     case "SHOW":
@@ -32,6 +33,7 @@ function reducer(state, action) {
     case "ADD_TO_BASKET":
       const [basket, hash] = addElement(state.basket, action.item, state.hash);
       //console.log(basket);
+      localStorage.setItem("cart", JSON.stringify(basket));
       return {
         ...state,
         basket: basket,
@@ -43,6 +45,7 @@ function reducer(state, action) {
     case "REMOVE_FROM_BASKET":
       const [sket, sh] = deleteElement(state.basket, action.id, state.hash);
       //console.log(sket);
+      localStorage.setItem("cart", JSON.stringify(sket));
       return {
         ...state,
         basket: sket,
@@ -56,6 +59,7 @@ function reducer(state, action) {
     case "DEL":
       const [asket, ash] = del(state.basket, action.id, state.hash);
       //console.log(asket);
+      localStorage.setItem("cart", JSON.stringify(asket));
       return {
         ...state,
         basket: asket,
@@ -65,6 +69,7 @@ function reducer(state, action) {
       break;
     case "ADD_ONE":
       const [ket, h] = addOne(state.basket, action.id, state.hash);
+      localStorage.setItem("cart", JSON.stringify(ket));
       return {
         ...state,
         basket: ket,
