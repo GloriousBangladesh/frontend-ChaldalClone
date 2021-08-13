@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.f0cc7e74.chunk.css",
-    "main.js": "/static/js/main.98dba134.chunk.js",
-    "main.js.map": "/static/js/main.98dba134.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c0e66bfe.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c0e66bfe.js.map",
-    "static/css/2.e89209c7.chunk.css": "/static/css/2.e89209c7.chunk.css",
-    "static/js/2.fbe6eea7.chunk.js": "/static/js/2.fbe6eea7.chunk.js",
-    "static/js/2.fbe6eea7.chunk.js.map": "/static/js/2.fbe6eea7.chunk.js.map",
-    "static/js/3.948e7687.chunk.js": "/static/js/3.948e7687.chunk.js",
-    "static/js/3.948e7687.chunk.js.map": "/static/js/3.948e7687.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.e89209c7.chunk.css.map": "/static/css/2.e89209c7.chunk.css.map",
-    "static/css/main.f0cc7e74.chunk.css.map": "/static/css/main.f0cc7e74.chunk.css.map",
-    "static/js/2.fbe6eea7.chunk.js.LICENSE.txt": "/static/js/2.fbe6eea7.chunk.js.LICENSE.txt",
-    "static/media/style.css": "/static/media/banner-corporate-page.5a866b8e.jpg",
-    "static/media/intlTelInput.css": "/static/media/flags@2x.9d5328fb.png"
+    "main.css": "/frontend-ChaldalClone/static/css/main.2d75fe53.chunk.css",
+    "main.js": "/frontend-ChaldalClone/static/js/main.98dba134.chunk.js",
+    "main.js.map": "/frontend-ChaldalClone/static/js/main.98dba134.chunk.js.map",
+    "runtime-main.js": "/frontend-ChaldalClone/static/js/runtime-main.af3bc6b1.js",
+    "runtime-main.js.map": "/frontend-ChaldalClone/static/js/runtime-main.af3bc6b1.js.map",
+    "static/css/2.246e794f.chunk.css": "/frontend-ChaldalClone/static/css/2.246e794f.chunk.css",
+    "static/js/2.fbe6eea7.chunk.js": "/frontend-ChaldalClone/static/js/2.fbe6eea7.chunk.js",
+    "static/js/2.fbe6eea7.chunk.js.map": "/frontend-ChaldalClone/static/js/2.fbe6eea7.chunk.js.map",
+    "static/js/3.948e7687.chunk.js": "/frontend-ChaldalClone/static/js/3.948e7687.chunk.js",
+    "static/js/3.948e7687.chunk.js.map": "/frontend-ChaldalClone/static/js/3.948e7687.chunk.js.map",
+    "index.html": "/frontend-ChaldalClone/index.html",
+    "static/css/2.246e794f.chunk.css.map": "/frontend-ChaldalClone/static/css/2.246e794f.chunk.css.map",
+    "static/css/main.2d75fe53.chunk.css.map": "/frontend-ChaldalClone/static/css/main.2d75fe53.chunk.css.map",
+    "static/js/2.fbe6eea7.chunk.js.LICENSE.txt": "/frontend-ChaldalClone/static/js/2.fbe6eea7.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/frontend-ChaldalClone/static/media/banner-corporate-page.5a866b8e.jpg",
+    "static/media/intlTelInput.css": "/frontend-ChaldalClone/static/media/flags@2x.9d5328fb.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c0e66bfe.js",
-    "static/css/2.e89209c7.chunk.css",
+    "static/js/runtime-main.af3bc6b1.js",
+    "static/css/2.246e794f.chunk.css",
     "static/js/2.fbe6eea7.chunk.js",
-    "static/css/main.f0cc7e74.chunk.css",
+    "static/css/main.2d75fe53.chunk.css",
     "static/js/main.98dba134.chunk.js"
   ]
 }
