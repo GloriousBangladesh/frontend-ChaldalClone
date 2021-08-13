@@ -23,7 +23,7 @@ function reducer(state, action) {
       return {
         ...state,
         user: {
-          jwt: action.jwt,
+          // jwt: action.jwt,
           name: action.name,
           email: action.email,
         },

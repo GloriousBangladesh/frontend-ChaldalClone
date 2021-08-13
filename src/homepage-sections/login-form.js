@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import axios from "axios";
 import { useStateValue } from "../StateProvider";
+import { bake_cookie } from 'sfcookies';
 
 function LoginForm(props) {
 
@@ -22,21 +23,23 @@ function LoginForm(props) {
     const login = (e) => {
         e.preventDefault();
         axios
-        .post("http://localhost:8000/auth/login", {
+        .post("https://chdl-clone-gb-project.herokuapp.com/auth/login", {
             email,
             password,
         })
         .then((res) => {
             console.log(res.data);
+            bake_cookie('jwt', res.data.jwt);
             dispatch({
                 type:"LOGIN",
-                jwt:res.data.jwt,
+                // jwt:res.data.jwt,
                 name:res.data.name,
                 email:res.data.email,
             });
-            localStorage.setItem('jwt', res.data.jwt);
+            // localStorage.setItem('jwt', res.data.jwt);
             localStorage.setItem('name', res.data.name);
             localStorage.setItem('email', res.data.email);
+            
             props.loginFormToggle();
             //history.push("/");
         })

@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import axios from "axios";
+import { read_cookie } from 'sfcookies';
 
+axios.defaults.withCredentials = true;
 function Checkout() {
-  const [{ basket, total, user }] = useStateValue();
+  const [{ basket, total, user, city }] = useStateValue();
 
   function openNav() {
     document.getElementById("mycartSidebar").style.width = "320px";
@@ -14,50 +16,36 @@ function Checkout() {
     document.getElementById("mycartSidebar").style.width = "0";
   }
 
-  // function placeOrder() {
-  //   axios
-  //     .post("http://localhost:8000/apis/add_order", basket, {
-  //       headers: {
-  //         "Authorization" : `Bearer ${user.jwt}`
-  //       },
+  function placeOrder() {
+    axios.defaults.withCredentials = true;
+    axios
+      .post("https://chdl-clone-gb-project.herokuapp.com/apis/add_order", {
+        "address": city
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
-  //     })
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       // console.log("aaaaaa");
-  //       if(res.data.result != pros){
-  //         dispatch({
-  //           type:"SHOW",
-  //           pros:res.data.result,
-  //           prev:pros
-  //         });
-
-  //         history.push("/search/" + str);
-  //         //history.pop();
-
-  //       }
-
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }
-
-  let PRODUCT_SEARCH_URL = "http://localhost:8000/apis/product?id=";
-  let IMG_SERVER_URL = "http://localhost:8000/";
-  let ADD_TO_CART_URL = "http://localhost:8000/auth/updatecart";
+  let PRODUCT_SEARCH_URL = "https://chdl-clone-gb-project.herokuapp.com/apis/product?id=";
+  let IMG_SERVER_URL = "https://chdl-clone-gb-project.herokuapp.com/";
+  let ADD_TO_CART_URL = "https://chdl-clone-gb-project.herokuapp.com/auth/updatecart";
 
   useEffect(() => {
     if (user == null) {
       return;
     }
-
+    
+    let jwt = read_cookie('jwt')
     axios
       .post(ADD_TO_CART_URL, basket, {
         headers: {
-          Authorization: `Bearer ${user.jwt}`,
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          "Authorization": `Bearer ${jwt}`,
+          "Content-type": "application/json; charset=UTF-8",
+          "Accept": "application/json",         
         },
       })
       .then((res) => {
@@ -68,7 +56,7 @@ function Checkout() {
       });
   }, [basket]);
 
-  
+
   let cartMiddle = (
     <div
       style={{ width: "100%", textAlign: "center" }}
@@ -158,7 +146,7 @@ function Checkout() {
           }}
           className="p-5"
         >
-          <div className="row justify-content-center">
+          <div onClick={placeOrder} className="row justify-content-center">
             <div
               style={{
                 backgroundColor: "#ff8182",

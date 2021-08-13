@@ -3,6 +3,7 @@ import "./css/style.css";
 import "./css/twemoji-awesome.css";
 import "./css/products-page.css";
 import "./css/login-form.css";
+import "./css/mobile-navbar.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'intl-tel-input/build/css/intlTelInput.css';
 import React, { useState, useEffect } from "react";
@@ -25,7 +26,7 @@ import Map from "./homepage-sections/map"
 import GreyRow from "./homepage-sections/grey-row"
 import Footer from "./homepage-sections/footer";
 import LoginForm from "./homepage-sections/login-form";
-import Cart from "./homepage-sections/cart";
+import MobileNavbar from "./homepage-sections/mobile-navbar";
 
 function App() {
   const [{ basket }, dispatch] = useStateValue();
@@ -50,12 +51,31 @@ function App() {
     }
   }
 
+  const [mobileHeader, setmobileHeader] = useState(false);
+  const mobileHeaderToggle = () => {
+    var formElement = document.getElementsByClassName("headerCollaspedButtonsBox")[0];
+    var wrapperElement = document.getElementsByClassName("wrapper")[0];
+
+    if(mobileHeader === false){
+      formElement.style.display = "block";
+      wrapperElement.classList.add("greyOverlay")
+      setmobileHeader(!mobileHeader);
+      formElement.style.opacity = "1";
+    }
+    else{
+      wrapperElement.classList.remove("greyOverlay")
+      setmobileHeader(!mobileHeader);
+      formElement.style.opacity = "0";
+      formElement.style.display = "none";
+    }
+  }
+
 
   useEffect(() => {
     if (localStorage.getItem("name")) {
       dispatch({
         type:"LOGIN",
-        jwt: localStorage.getItem("jwt"),
+        // jwt: localStorage.getItem("jwt"),
         name: localStorage.getItem("name"),
         email: localStorage.getItem("email"),
       });
@@ -65,13 +85,14 @@ function App() {
   return (
     <div>
       <LoginForm loginFormToggle={loginFormToggle}/>
+      <MobileNavbar mobileHeaderToggle={mobileHeaderToggle}/>
       <div className="wrapper">
         <Router>
           <Sidebar/>
           <div id="content">
             {/* <Cart/> */}
             <Checkout />
-            <Header loginFormToggle={loginFormToggle}/>
+            <Header loginFormToggle={loginFormToggle} mobileHeaderToggle={mobileHeaderToggle}/>
             <Switch>
               <Route path="/select-city">
                 <City />

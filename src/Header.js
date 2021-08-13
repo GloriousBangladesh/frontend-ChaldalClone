@@ -14,28 +14,20 @@ function Header(props) {
   const searchLocation = (event) => {
     var str = event.target.value;
     axios
-      .get("http://localhost:8000/apis/search?q=" + str)
+      .get("https://chdl-clone-gb-project.herokuapp.com/apis/search?q=" + str)
       .then((res) => {
-        // console.log(res.data);
-        // console.log("aaaaaa");
         if(res.data.result != pros){
           dispatch({
             type:"SHOW",
             pros:res.data.result,
             prev:pros
           });
-          
           history.push("/search/" + str);
-          //history.pop();
-          
         }
-        
       })
       .catch((err) => {
         console.log(err);
       });
-
-    //console.log(str);
   }
 
   window.onpopstate=function()
@@ -73,11 +65,11 @@ function Header(props) {
     </div>
   );
 
-  if(user){
+  if(user != null){
     signinButton = (<div
       id="signin-button"
       className="col-md-3 text-center border-right"
-      onClick={props.loginFormToggle}
+      onClick={props.mobileHeaderToggle}
     >
       {user.name}
     </div>)

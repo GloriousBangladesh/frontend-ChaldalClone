@@ -17,7 +17,7 @@ function ShowProduct(props) {
     "8000" +
     "/";
   // console.log(locationHelper)
-  var catURL = "http://localhost:8000/apis/category?q=" + product;
+  var catURL = "https://chdl-clone-gb-project.herokuapp.com/apis/category?q=" + product;
 
   //console.log(query)
   useEffect(() => {
@@ -42,7 +42,7 @@ function ShowProduct(props) {
     }
     else{
       axios
-      .get("http://localhost:8000/apis/search?q=" + query)
+      .get("https://chdl-clone-gb-project.herokuapp.com/apis/search?q=" + query)
       .then((res) => {
         console.log(res.data);
         console.log("aaaaaa");
