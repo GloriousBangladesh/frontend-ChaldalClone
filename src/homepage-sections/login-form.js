@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import axios from "axios";
 import { useStateValue } from "../StateProvider";
-import { bake_cookie } from 'sfcookies';
+//import { bake_cookie } from 'sfcookies';
+import Cookies from 'universal-cookie';
 
 function LoginForm(props) {
 
@@ -24,20 +25,23 @@ function LoginForm(props) {
         e.preventDefault();
         axios
         .post("https://chdl-clone-gb-project.herokuapp.com/auth/login", {
-            email,
-            password,
+            'email' : email,
+            'password': password,
         })
         .then((res) => {
             console.log(res.data);
             //bake_cookie('jwt', res.data.jwt);
-            document.cookie = `jwt=${res.data.jwt};max-age=604800;domain=chdl-clone-gb-project.herokuapp.com`
+            // document.cookie = `referral_key=hello;max-age=604800;domain=example.com`
+            document.cookie = `jwt="${res.data.jwt}",max-age=604800,domain=chdl-clone-gb-project.herokuapp.com`;
+            // const cookies = new Cookies();
+            // cookies.set('jwt', res.data.jwt, { path: '/' });
             dispatch({
                 type:"LOGIN",
-                // jwt:res.data.jwt,
+                jwt:res.data.jwt,
                 name:res.data.name,
                 email:res.data.email,
             });
-            // localStorage.setItem('jwt', res.data.jwt);
+            localStorage.setItem('jwt', res.data.jwt);
             localStorage.setItem('name', res.data.name);
             localStorage.setItem('email', res.data.email);
             
@@ -46,6 +50,7 @@ function LoginForm(props) {
         })
         .catch((err) => {
             console.log(err);
+            
         });
     };
 

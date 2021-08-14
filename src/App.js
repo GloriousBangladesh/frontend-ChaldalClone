@@ -77,7 +77,7 @@ function App() {
     if (localStorage.getItem("name")) {
       dispatch({
         type:"LOGIN",
-        // jwt: localStorage.getItem("jwt"),
+        jwt: localStorage.getItem("jwt"),
         name: localStorage.getItem("name"),
         email: localStorage.getItem("email"),
       });

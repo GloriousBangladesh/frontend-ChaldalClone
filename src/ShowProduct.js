@@ -100,7 +100,7 @@ function ShowProduct(props) {
   }
 
   return (
-    <div className="row mt-5 justify-content-center">
+    <div className="row mt-5">
       {displayItem}
     </div>
   );

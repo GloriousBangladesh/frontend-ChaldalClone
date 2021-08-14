@@ -39,13 +39,14 @@ function Checkout() {
       return;
     }
     
-    let jwt = read_cookie('jwt');
+    // let jwt = read_cookie('jwt');
+    let jwt = localStorage.getItem('jwt');
+    console.log(jwt);
     axios.defaults.withCredentials = true;
     axios
       .post(ADD_TO_CART_URL, basket, {
         headers: {
           "Authorization": `Bearer ${jwt}`,
-          
           "Content-type": "application/json; charset=UTF-8",
           "Accept": "application/json",         
         },
@@ -102,9 +103,9 @@ function Checkout() {
   );
 
   let totalItemsInCart = "0 ITEM";
-
+  
   if (basket.length > 0) {
-    openNav();
+    //openNav();
     console.log(basket);
     totalItemsInCart =
       basket.length + (basket.length == 0 ? " ITEM" : " ITEMS");
@@ -173,6 +174,14 @@ function Checkout() {
       </div>
     );
   }
+
+
+
+  useEffect(()=> {
+    if (basket.length > 0) {
+      openNav();
+    }
+  }, []);
 
   return (
     <div id="mycartSidebar" className="cartSidebar">
