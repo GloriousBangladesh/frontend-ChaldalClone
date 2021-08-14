@@ -9,13 +9,16 @@ function ShowProduct(props) {
   let { product, query } = useParams();
   const [{pros},dispatch] = useStateValue();
 
-  const locationHelper =
-    window.location.protocol +
-    "//" +
-    window.location.hostname +
-    ":" +
-    "8000" +
-    "/";
+  // const locationHelper =
+  //   window.location.protocol +
+  //   "//" +
+  //   window.location.hostname +
+  //   ":" +
+  //   "8000" +
+  //   "/";
+
+  const IMAGE_HOST = "https://chdl-clone-gb-project.herokuapp.com/"
+
   // console.log(locationHelper)
   var catURL = "https://chdl-clone-gb-project.herokuapp.com/apis/category?q=" + product;
 
@@ -68,7 +71,7 @@ function ShowProduct(props) {
         <Product
           key={pro.id}
           id={pro.id}
-          image={locationHelper + pro.image}
+          image={IMAGE_HOST + pro.image}
           title={pro.title}
           measure={pro.measure}
           price={parseFloat(pro.price)}
@@ -97,7 +100,7 @@ function ShowProduct(props) {
   }
 
   return (
-    <div className="row mt-5">
+    <div className="row mt-5 justify-content-center">
       {displayItem}
     </div>
   );

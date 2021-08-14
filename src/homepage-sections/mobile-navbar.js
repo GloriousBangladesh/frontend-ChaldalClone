@@ -70,7 +70,7 @@ function MobileNavbar(props) {
   return (
     <div
       className="headerCollaspedButtonsBox"
-      style={{ display: "block", opacity: "0" }}
+      style={{ display: "none", opacity: "0" }}
     >
       <div id="headerCollaspedButtonsInnerDiv">
         <div className="inner-box justify-content-center">

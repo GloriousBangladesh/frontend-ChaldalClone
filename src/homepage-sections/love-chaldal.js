@@ -32,7 +32,7 @@ function LoveChaldal() {
             <div style={{background: "#ffffff url('img/service2.jpg') no-repeat right top", backgroundSize: "cover"}}
             className="tile border text-center rounded col-md-4">
             <img style={{background: "#ffffff url('img/service2.jpg') no-repeat right top", backgroundSize: "cover"}}
-                className="img-fluid" src="img/service2.jpg" alt=""/>
+                className="img-fluid" src="/img/service2.jpg" alt=""/>
             <div style={{borderWidth:"3px !important"}} className="centered pt-4 border-bottom border-success">
                 <div className="tile-text-title">
                 Freshly Picked
@@ -45,7 +45,7 @@ function LoveChaldal() {
             <div style={{background: "#ffffff url('img/service3.jpg') no-repeat right top", backgroundSize: "cover"}}
             className="tile border text-center rounded col-md-4">
             <img style={{background: "#ffffff url('img/service3.jpg') no-repeat right top", backgroundSize: "cover"}}
-                className="img-fluid" src="img/service3.jpg" alt=""/>
+                className="img-fluid" src="/img/service3.jpg" alt=""/>
             <div style={{borderWidth:"3px !important"}} className="centered pt-4 border-bottom border-danger">
                 <div className="tile-text-title">
                     A wide range of Products

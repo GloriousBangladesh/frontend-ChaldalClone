@@ -22,7 +22,7 @@ function Front() {
                 id="header-logo"
                 className="egg_set img-fluid"
                 style={{width: "70%"}}
-                src="img/chaldal-logo-small.png"
+                src="/img/chaldal-logo-small.png"
                 alt=""
               />
             </a>

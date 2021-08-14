@@ -32,15 +32,15 @@ function InstallApp() {
                         });
                     </script> */}
                     <div className="row justify-content-center mt-4 mb-5">
-                        <img style={{width: "50%"}} className="col-md-4 col-sm-1 img-fluid" src="img/google-play.png"
+                        <img style={{width: "50%"}} className="col-md-4 col-sm-1 img-fluid" src="/img/google-play.png"
                         alt="Download chaldal Android app"/>
-                        <img style={{width: "50%"}} className="col-md-4 col-sm-1 img-fluid" src="img/app-store.png"
+                        <img style={{width: "50%"}} className="col-md-4 col-sm-1 img-fluid" src="/img/app-store.png"
                         alt="Download chaldal iOS app"/>
                     </div>
                 </div>
 
                 <div className="pb-0 mb-0 category-cell text-center rounded col">
-                <img className="img-fluid float-right" src="img/app-preview.png"/>
+                <img className="img-fluid float-right" src="/img/app-preview.png"/>
                 </div>
             </div>
         </section>

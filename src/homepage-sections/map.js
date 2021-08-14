@@ -4,7 +4,7 @@ function Map() {
   return (
     <section className="row bg-dark mx-1">
     <div className=" col-md-7 container mapImage">
-      <img className="img-fluid" src="img/map.png" alt=""/>
+      <img className="img-fluid" src="/img/map.png" alt=""/>
     </div>
     <div className="companyLog col-md-5 text-center mt-5">
       <h1 style={{fontSize: "xx-large"}} className="font-weight-bold text-warning">Dhaka</h1>

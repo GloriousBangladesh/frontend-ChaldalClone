@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStateValue } from "./StateProvider";
 import { useHistory, useLocation } from "react-router";
-import { propTypes } from "react-bootstrap/esm/Image";
-import Sidebar from "./sidebar";
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 
 function Header(props) {
-  const history = useHistory();
+  const rhistory = useHistory();
 
   const [{ basket, city, user, pros }, dispatch] = useStateValue();
 
@@ -22,7 +20,7 @@ function Header(props) {
             pros:res.data.result,
             prev:pros
           });
-          history.push("/search/" + str);
+          rhistory.push("/search/" + str);
         }
       })
       .catch((err) => {
@@ -30,11 +28,15 @@ function Header(props) {
       });
   }
 
-  window.onpopstate=function()
+  
+    window.onpopstate=function()
   {
-    history.push("/");
+    if((''+window.location.href).includes("/search")){
+      window.history.back();
+    }
   }
-
+  
+  
 
   const sidebarToggle = () => {
     const sidebarBtn = document.getElementById("sidebarCollapse");
@@ -85,7 +87,7 @@ function Header(props) {
         className="row justify-content-around my-auto navzindex"
       >
         <div className="col-2 my-auto">
-          <a className="navbar-brand" href="#">
+          <span className="navbar-brand">
             <button
               type="button"
               onClick={sidebarToggle}
@@ -96,14 +98,15 @@ function Header(props) {
               <span></span>
               <span></span>
             </button>
-            <img
+            <Link to="/"><img
               id="header-logo"
               className="egg_set img-fluid"
               style={{ width: "70%" }}
-              src="img/chaldal-logo-small.png"
+              src="/img/chaldal-logo-small.png"
               alt=""
-            />
-          </a>
+            /></Link>
+            
+          </span>
         </div>
 
         <div className="col-5 justify-content-center my-auto">

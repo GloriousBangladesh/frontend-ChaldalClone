@@ -92,6 +92,7 @@ function Checkout() {
           top: "0",
           left: "0",
           right: "0",
+          backgroundColor: "white"
         }}
         className="mt-3 text-center font-weight-bold"
       >

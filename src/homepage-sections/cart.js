@@ -24,7 +24,7 @@ function Cart() {
         </div>
 
         <div style={{width: "100%",textAlign: "center"}} className="justify-content-center my-5">
-          <img style={{width: "50%"}} className="img-fluid" src="img/emptyShoppingBag.png" alt=""/><br/>
+          <img style={{width: "50%"}} className="img-fluid" src="/img/emptyShoppingBag.png" alt=""/><br/>
           <div className="mt-3 text-center mx-5" style={{fontSize:"17px",color: "#aaa"}}>Your shopping bag is empty. Start shopping</div>
         </div>
         

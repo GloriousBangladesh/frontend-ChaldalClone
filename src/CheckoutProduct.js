@@ -28,59 +28,48 @@ function CheckoutProduct({ id, title, amount, price, image, measure }) {
     });
   };
 
-  return (
-    // <div>
-    //   <br />
-    //   <br />
-    //   <span>{title}</span>
-    //   <br />
-    //   <span>{amount}</span>
-    //   <br />
-    //   <span>{price}</span>
-    //   <br />
-    //   <button onClick={remove}>remove</button>
-    //   <button onClick={increment}>increment</button>
-    //   <button onClick={decrement}>decrement</button>
-    //   <br />
-    //   <br />
-    // </div>
+  const IMAGE_HOST = "https://chdl-clone-gb-project.herokuapp.com/"
 
-          <div id={id} key={id} style={{color: "#615e58"}} className="row justify-content-around border-bottom">
-            <div className="col-2 my-3">
-              <div onClick={increment} className="cartItemButton" id="increaseButton">
-                <i className="fa fa-angle-up" aria-hidden="true"></i>
-              </div>
-              <div id="cartItemQuantity">
-                {amount}
-              </div>
-              <div onClick={decrement} className="cartItemButton" id="decreaseButton">
-                <i className="fa fa-angle-down" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div className="col-2 my-3 px-1">
-              <img id={id} className="img-fluid" src={image} alt=""/>
-            </div>
-            <div className="col-3 my-4 px-0">
-              <div id="cartItemName">
-                {title}
-              </div>
-              <div>
-                <small id="pricePerMeasure">৳ {price} / {measure}</small>
-              </div>
-            </div>
-            <div className="col-4 my-2 px-0 py-3">
-              <div className="row mx-1">
-                <div className="col-8 my-3 px-0">
-                  <div style={{color: "red"}} id="totalPrice">
-                    ৳ {price * amount}
-                  </div>
-                </div>
-                <div onClick={remove} className="cartItemButton col-3 my-3 px-0">
-                  &times;
-                </div>
-              </div>
+  return (
+    <div
+      id={id}
+      key={id}
+      style={{ color: "#615e58" }}
+      className="row justify-content-around border-bottom"
+    >
+      <div className="col-2 my-3">
+        <div onClick={increment} className="cartItemButton" id="increaseButton">
+          <i className="fa fa-angle-up" aria-hidden="true"></i>
+        </div>
+        <div id="cartItemQuantity">{amount}</div>
+        <div onClick={decrement} className="cartItemButton" id="decreaseButton">
+          <i className="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div className="col-2 my-3 px-1 py-3">
+        <img id={id} className="img-fluid" src={image} alt="" />
+      </div>
+      <div className="col-3 my-4 px-0">
+        <div id="cartItemName">{title}</div>
+        <div>
+          <small id="pricePerMeasure">
+            ৳ {price} / {measure}
+          </small>
+        </div>
+      </div>
+      <div className="col-4 my-2 px-0 py-3">
+        <div className="row mx-1">
+          <div className="col-8 my-3 px-0">
+            <div style={{ color: "red" }} id="totalPrice">
+              ৳ {price * amount}
             </div>
           </div>
+          <div onClick={remove} className="cartItemButton col-3 my-3 px-0">
+            &times;
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

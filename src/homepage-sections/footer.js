@@ -8,7 +8,7 @@ function Footer() {
                 
                 <div className="col-md-9 servicefooter">
                     <div className="mx-2 text-md-start text-center">
-                        <img className="egg_set" src="img/chaldal-logo-small.png" alt="" />
+                        <img className="egg_set" src="/img/chaldal-logo-small.png" alt="" />
                         <p style={{ fontSize: "small", color: "#615e58" }}>
                             Chaldal.com is an online shop available in Dhaka, Narayanganj,
                             Chattogram and Jashore. We believe time is valuable to our fellow
