@@ -39,11 +39,13 @@ function Checkout() {
       return;
     }
     
-    let jwt = read_cookie('jwt')
+    let jwt = read_cookie('jwt');
+    axios.defaults.withCredentials = true;
     axios
       .post(ADD_TO_CART_URL, basket, {
         headers: {
           "Authorization": `Bearer ${jwt}`,
+          
           "Content-type": "application/json; charset=UTF-8",
           "Accept": "application/json",         
         },

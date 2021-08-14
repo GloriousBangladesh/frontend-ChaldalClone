@@ -84,7 +84,7 @@ function Header(props) {
         style={{ width: "100%" }}
         className="row justify-content-around my-auto navzindex"
       >
-        <div className="col-2">
+        <div className="col-2 my-auto">
           <a className="navbar-brand" href="#">
             <button
               type="button"
@@ -107,7 +107,7 @@ function Header(props) {
         </div>
 
         <div className="col-5 justify-content-center my-auto">
-          <div className="input-group mb-3 my-auto navzindex">
+          <div className="input-group my-auto navzindex">
             <input
               onChange={(event) => searchLocation(event)}
               type="text"
@@ -132,11 +132,11 @@ function Header(props) {
           style={{ height: "100%" }}
           className="col-5 justify-content-center justify-content-sm-end my-auto"
         >
-          <i
+          <span onClick={props.mobileHeaderToggle}><i
             id="three-dot-button"
             className="fa fa-ellipsis-v"
             aria-hidden="true"
-          ></i>
+          ></i></span>
           <div
             style={{ height: "100%" }}
             className="row justify-content-around"

@@ -29,7 +29,8 @@ function LoginForm(props) {
         })
         .then((res) => {
             console.log(res.data);
-            bake_cookie('jwt', res.data.jwt);
+            //bake_cookie('jwt', res.data.jwt);
+            document.cookie = `jwt=${res.data.jwt};max-age=604800;domain=chdl-clone-gb-project.herokuapp.com`
             dispatch({
                 type:"LOGIN",
                 // jwt:res.data.jwt,
@@ -88,14 +89,14 @@ function LoginForm(props) {
                         <div className="col-sm-4 vr_line"></div><div className="col-sm-2" style={{textAlign:"center"}}> OR  </div><div className=" vr_line col-sm-4"></div>
                     </div>
                     
-                    <h6 className="text-center my-5 mh">PLEASE ENTER YOUR MOBILE PHONE NUMBER</h6>
+                    {/* <h6 className="text-center my-5 mh">PLEASE ENTER YOUR MOBILE PHONE NUMBER</h6> */}
                     
                     <div className="text-center mt-2">
                         <form onSubmit={(e) => login(e)} id="login">
                     
                         
-                        <input value={email} onChange={(e) => setEmail(e.target.value)} id="phone" type="tel" name="phone" />
-                        <input value={password} onChange={(e) => setPassword(e.target.value)} id="phone" type="password" name="password" />
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} id="phone" type="tel" name="phone" placeholder="Email / Phone Number" />
+                        <input value={password} onChange={(e) => setPassword(e.target.value)} id="phone" type="password" name="password" placeholder="Password" />
                         <input type="submit" className="btns" value="Sign up/Login" />
                         </form>
                         <div className="alert alert-info" style={{display: "none"}}></div>

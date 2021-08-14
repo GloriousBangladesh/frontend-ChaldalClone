@@ -28,6 +28,7 @@ import Footer from "./homepage-sections/footer";
 import LoginForm from "./homepage-sections/login-form";
 import MobileNavbar from "./homepage-sections/mobile-navbar";
 
+
 function App() {
   const [{ basket }, dispatch] = useStateValue();
   
@@ -71,6 +72,7 @@ function App() {
   }
 
 
+
   useEffect(() => {
     if (localStorage.getItem("name")) {
       dispatch({
@@ -85,7 +87,7 @@ function App() {
   return (
     <div>
       <LoginForm loginFormToggle={loginFormToggle}/>
-      <MobileNavbar mobileHeaderToggle={mobileHeaderToggle}/>
+      <MobileNavbar loginFormToggle={loginFormToggle} mobileHeaderToggle={mobileHeaderToggle}/>
       <div className="wrapper">
         <Router>
           <Sidebar/>
