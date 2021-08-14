@@ -48,8 +48,9 @@ function Checkout() {
         headers: {
           "Authorization": `Bearer ${jwt}`,
           "Content-type": "application/json; charset=UTF-8",
-          "Accept": "application/json",         
+          "Accept": "application/json",       
         },
+        withCredentials: true
       })
       .then((res) => {
         console.log(res);

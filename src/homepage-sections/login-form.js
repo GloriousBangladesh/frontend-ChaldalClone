@@ -32,7 +32,7 @@ function LoginForm(props) {
             console.log(res.data);
             //bake_cookie('jwt', res.data.jwt);
             // document.cookie = `referral_key=hello;max-age=604800;domain=example.com`
-            document.cookie = `jwt="${res.data.jwt}",max-age=604800,domain=chdl-clone-gb-project.herokuapp.com`;
+            //document.cookie = `jwt=${res.data.jwt};max-age=604800;HTTPOnly=true;SameSite=None`;
             // const cookies = new Cookies();
             // cookies.set('jwt', res.data.jwt, { path: '/' });
             dispatch({
