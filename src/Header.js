@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Header(props) {
   const rhistory = useHistory();
 
-  const [{ basket, city, user, pros }, dispatch] = useStateValue();
+  const [{ basket, city, user, pros, }, dispatch] = useStateValue();
 
   const searchLocation = (event) => {
     var str = event.target.value;
@@ -36,7 +36,27 @@ function Header(props) {
     }
   }
   
+  {/* https://nominatim.openstreetmap.org/reverse.php?lat=23.95863005708381&lon=90.64152699999998&format=jsonv2 */}
+
+  function getMyLocation(){
+    if (navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(displayLocation, displayError);
+    } else {
+      alert ("oops, no geolocation support");
+    }
+  }
   
+  function displayLocation(position){
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    console.log(latitude, longitude);
+  }
+
+  function displayError(){
+    console.log("Error getting location");
+  }
+
+  getMyLocation();
 
   const sidebarToggle = () => {
     const sidebarBtn = document.getElementById("sidebarCollapse");

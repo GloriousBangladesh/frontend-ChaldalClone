@@ -3,9 +3,16 @@ import React from "react";
 import { useStateValue } from "../StateProvider";
 import axios from "axios";
 import { delete_cookie } from 'sfcookies';
+import { useHistory } from "react-router-dom";
+
 
 function MobileNavbar(props) {
+  const history = useHistory();
   const [{ user }, dispatch] = useStateValue();
+
+  const toOrders = () => {
+    history.push("/orders");
+  }
 
   const logout = () => {
     axios.post("https://chdl-clone-gb-project.herokuapp.com/auth/logout")
@@ -26,13 +33,13 @@ function MobileNavbar(props) {
   }
 
   let yourOrdersButton = (
-    <div onClick={props.mobileHeaderToggle} className="headerCollaspedButton">
-      <button className="btn hcb-btn" type="button">
-        <span>
-          <i className="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp; Your
-          Orders
-        </span>
-      </button>
+    <div onClick={() => {props.mobileHeaderToggle(); toOrders()}} className="headerCollaspedButton">
+        <button className="btn hcb-btn" type="button">
+          <span>
+            <i className="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp; Your
+            Orders
+          </span>
+        </button>
     </div>
   );
 

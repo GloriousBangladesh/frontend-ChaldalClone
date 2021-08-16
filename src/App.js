@@ -27,6 +27,7 @@ import GreyRow from "./homepage-sections/grey-row"
 import Footer from "./homepage-sections/footer";
 import LoginForm from "./homepage-sections/login-form";
 import MobileNavbar from "./homepage-sections/mobile-navbar";
+import ShowOrders from "./homepage-sections/show-orders"
 
 
 function App() {
@@ -104,6 +105,9 @@ function App() {
               </Route>
               <Route path="/products/:product">
                 <ShowProduct purpose="category"/>
+              </Route>
+              <Route path="/orders/">
+                <ShowOrders />
               </Route>
               {/* <Route path="/checkout">
                 <Checkout />
