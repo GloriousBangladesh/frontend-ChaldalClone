@@ -32,20 +32,20 @@ import ShowOrders from "./homepage-sections/show-orders"
 
 function App() {
   const [{ basket }, dispatch] = useStateValue();
-  
+
   const [loginForm, setLoginForm] = useState(false);
 
   const loginFormToggle = () => {
     var formElement = document.getElementsByClassName("loginbox")[0];
     var wrapperElement = document.getElementsByClassName("wrapper")[0];
 
-    if(loginForm === false){
+    if (loginForm === false) {
       formElement.style.display = "block";
       wrapperElement.classList.add("greyOverlay")
       setLoginForm(!loginForm);
       formElement.style.opacity = "1";
     }
-    else{
+    else {
       wrapperElement.classList.remove("greyOverlay")
       setLoginForm(!loginForm);
       formElement.style.opacity = "0";
@@ -58,13 +58,13 @@ function App() {
     var formElement = document.getElementsByClassName("headerCollaspedButtonsBox")[0];
     var wrapperElement = document.getElementsByClassName("wrapper")[0];
 
-    if(mobileHeader === false){
+    if (mobileHeader === false) {
       formElement.style.display = "block";
       wrapperElement.classList.add("greyOverlay")
       setmobileHeader(!mobileHeader);
       formElement.style.opacity = "1";
     }
-    else{
+    else {
       wrapperElement.classList.remove("greyOverlay")
       setmobileHeader(!mobileHeader);
       formElement.style.opacity = "0";
@@ -77,7 +77,7 @@ function App() {
   useEffect(() => {
     if (localStorage.getItem("name")) {
       dispatch({
-        type:"LOGIN",
+        type: "LOGIN",
         jwt: localStorage.getItem("jwt"),
         name: localStorage.getItem("name"),
         email: localStorage.getItem("email"),
@@ -87,15 +87,15 @@ function App() {
 
   return (
     <div>
-      <LoginForm loginFormToggle={loginFormToggle}/>
-      <MobileNavbar loginFormToggle={loginFormToggle} mobileHeaderToggle={mobileHeaderToggle}/>
-      <div className="wrapper">
-        <Router>
-          <Sidebar/>
+      <LoginForm loginFormToggle={loginFormToggle} />
+      <Router>
+        <MobileNavbar loginFormToggle={loginFormToggle} mobileHeaderToggle={mobileHeaderToggle} />
+        <div className="wrapper">
+          <Sidebar />
           <div id="content">
             {/* <Cart/> */}
             <Checkout />
-            <Header loginFormToggle={loginFormToggle} mobileHeaderToggle={mobileHeaderToggle}/>
+            <Header loginFormToggle={loginFormToggle} mobileHeaderToggle={mobileHeaderToggle} />
             <Switch>
               <Route path="/select-city">
                 <City />
@@ -104,33 +104,34 @@ function App() {
                 <Login />
               </Route>
               <Route path="/products/:product">
-                <ShowProduct purpose="category"/>
+                <ShowProduct purpose="category" />
               </Route>
-              <Route path="/orders/">
+              <Route path="/orders">
                 <ShowOrders />
               </Route>
               {/* <Route path="/checkout">
                 <Checkout />
               </Route> */}
               <Route path="/search/:query">
-                <ShowProduct purpose="search"/>
+                <ShowProduct purpose="search" />
               </Route>
               <Route path="/">
-                <HeaderBanner/>
-                <ProductCategories/>
-                <HowToOrder/>
-                <LoveChaldal/>
-                <ClientReaction/>
-                <Corporate/>
-                <InstallApp/>
-                <Map/>
-                <GreyRow/>
-                <Footer/>
+                <HeaderBanner />
+                <ProductCategories />
+                <HowToOrder />
+                <LoveChaldal />
+                <ClientReaction />
+                <Corporate />
+                <InstallApp />
+                <Map />
+                <GreyRow />
+                <Footer />
               </Route>
             </Switch>
           </div>
-        </Router>
-      </div>
+        </div>
+      </Router>
+
     </div>
   );
 }

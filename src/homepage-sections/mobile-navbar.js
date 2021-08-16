@@ -33,7 +33,7 @@ function MobileNavbar(props) {
   }
 
   let yourOrdersButton = (
-    <div onClick={() => {props.mobileHeaderToggle(); toOrders()}} className="headerCollaspedButton">
+    <div onClick={() => {props.mobileHeaderToggle(); toOrders();}} className="headerCollaspedButton">
         <button className="btn hcb-btn" type="button">
           <span>
             <i className="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp; Your
